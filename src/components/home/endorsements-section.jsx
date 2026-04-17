@@ -63,7 +63,7 @@ const EndorsementsSection = () => {
           />
           <EndorsementCard
             name="Mike Lindell"
-            role="CEO, MyPillow"
+            role="CEO My Pillow"
             tone="white"
             className="col-span-12 md:col-span-4 lg:col-span-3"
           />

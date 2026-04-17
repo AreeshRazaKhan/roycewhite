@@ -7,54 +7,43 @@ import PageShell from '@/components/brand/page-shell'
 const ROLES = [
   {
     number: '01',
-    title: 'Door Knocker',
-    body: 'The single most powerful act in politics: a neighbor on a neighbor\'s porch. We organize in turfs of 50–80 doors. No cold calls.',
-    commitment: '2–4 hrs / week',
+    title: 'Signs',
+    body: 'Put a Royce White yard sign in your yard, your farm gate, or your storefront. Visible signal to your neighbors that the people are coming.',
   },
   {
     number: '02',
-    title: 'Phone Banker',
-    body: 'Call Minnesotans from your kitchen. Scripts provided, dialer provided, pep talk included. Evenings and weekends.',
-    commitment: '1–3 hrs / week',
+    title: 'Events',
+    body: 'Help staff rallies, town halls, and the weekly volunteer meeting. Set up, greet attendees, run the sign-in table.',
   },
   {
     number: '03',
-    title: 'MNGOP Delegate',
-    body: 'Become a delegate for the 2026 endorsement. It\'s easier than you think — we walk you through every step.',
-    commitment: 'One weekend',
+    title: 'Phones',
+    body: 'Call Minnesotans from home. Scripts and dialer provided. Evenings and weekends work best for most volunteers.',
   },
   {
     number: '04',
-    title: 'House Party Host',
-    body: 'Twelve neighbors in your living room, Royce on speaker. We bring the agenda, you bring the coffee.',
-    commitment: 'One evening',
+    title: 'Donate',
+    body: 'A populist campaign runs on grassroots dollars. Chip in what you can \u2014 no corporate PAC money, ever.',
   },
   {
     number: '05',
-    title: 'County Captain',
-    body: 'Own a county. Build a local team. Report up. If you\'ve organized anything — a church group, a PTA, a fantasy league — you can do this.',
-    commitment: '5–10 hrs / week',
+    title: 'Doors',
+    body: 'Knock doors with a team in your precinct. The single most effective campaign action. Turf provided, training provided.',
   },
   {
     number: '06',
-    title: 'Rapid Response',
-    body: 'Online, on-camera, on-the-spot. Share content, defend the record, push back on the lies — in real time.',
-    commitment: 'Flexible',
-  },
-]
-
-const TESTIMONIALS = [
-  {
-    quote:
-      'I\'d never volunteered for anything political in my life. Royce\'s team walked me through knocking my first 30 doors and now I\'m running my precinct.',
-    name: 'Kara J.',
-    city: 'Rochester, MN',
+    title: 'Elections',
+    body: 'Work inside the process \u2014 caucuses, conventions, primary day, general day. Become a delegate and help secure the 2026 MNGOP endorsement.',
   },
   {
-    quote:
-      'The campaign gave me something worth showing up for. It\'s not a party anymore — it\'s a movement.',
-    name: 'Dan P.',
-    city: 'Duluth, MN',
+    number: '07',
+    title: 'Fundraising',
+    body: 'Host a house party, run a meet-and-greet, or drive a personal fundraising page. Every dollar from a real Minnesotan matters.',
+  },
+  {
+    number: '08',
+    title: 'Guard Ballots',
+    body: 'Volunteer as a poll watcher or election integrity observer. Paper ballots, single-day voting, voter ID \u2014 and people who show up to verify it.',
   },
 ]
 
@@ -66,11 +55,18 @@ const VolunteerPage = () => {
         number="030"
         title={
           <>
-            Minnesotans built this.{' '}
-            <em className="not-italic italic text-liberty">You finish it.</em>
+            Tell us how you can{' '}
+            <em className="not-italic italic text-liberty">participate.</em>
           </>
         }
-        lede="The Royce White campaign runs on Minnesotans — the ones who knock doors, host house parties, print yard signs, and chip in a dollar when they can. Pick a role. Show up. Make the swamp answer."
+        lede={
+          <>
+            We want to hear from you. This is a populist movement, so naturally mine is a
+            populist campaign. Please become a MNGOP delegate for Royce White. Help me get the
+            2026 MNGOP endorsement for Senate &mdash; it&rsquo;s easy to do, sign up here and
+            we&rsquo;ll contact you about how.
+          </>
+        }
       >
         <div className="flex flex-wrap gap-4">
           <BrandButton variant="primary" href="#signup">
@@ -98,19 +94,19 @@ const VolunteerPage = () => {
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-16">
             <div className="col-span-12 lg:col-span-4">
-              <p className="brand-section-label text-patriot">/031 — Ways to Fight</p>
+              <p className="brand-section-label text-patriot">/031 — Volunteer Opportunities</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <h2
                 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900"
                 style={{ fontSize: 'clamp(2.25rem, 3.75vw, 3.5rem)' }}
               >
-                Six ways to put your{' '}
+                Eight ways to put your{' '}
                 <em className="not-italic italic text-patriot">hands</em> on this campaign.
               </h2>
               <p className="mt-6 text-[17px] leading-[1.8] text-ink/80 font-light max-w-2xl">
-                Whatever you have — an afternoon, a phone, a living room, a county — we've built
-                a role around it. Pick one, or tell us what you're up for in the form below.
+                Pick one. Pick several. Tell us what you&rsquo;re up for in the form below and
+                a volunteer coordinator will reach out.
               </p>
             </div>
           </div>
@@ -119,36 +115,33 @@ const VolunteerPage = () => {
             {ROLES.map((role, idx) => (
               <article
                 key={role.number}
-                className={`col-span-12 md:col-span-6 lg:col-span-4 relative bg-white border border-stone-200 rounded-[4px] p-10 overflow-hidden group transition-colors duration-300 hover:bg-navy-900 hover:border-navy-900 ${
-                  idx === 0 ? 'lg:col-span-8' : ''
+                className={`col-span-12 md:col-span-6 lg:col-span-3 relative bg-white border border-stone-200 rounded-[4px] p-8 overflow-hidden group transition-colors duration-300 hover:bg-navy-900 hover:border-navy-900 ${
+                  idx === 0 ? 'md:col-span-12 lg:col-span-6' : ''
                 }`}
               >
                 <span
                   aria-hidden="true"
                   className="absolute top-0 left-0 w-[3px] h-12 bg-patriot"
                 />
-                <div className="flex items-start justify-between gap-4 mb-6">
-                  <span className="inline-flex items-center justify-center w-11 h-11 rounded-full border-[1.5px] border-navy-900 transition-colors group-hover:border-liberty">
-                    <span className="font-accent text-[12px] font-semibold tracking-[0.1em] uppercase text-patriot transition-colors group-hover:text-liberty">
-                      /{role.number}
-                    </span>
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full border-[1.5px] border-navy-900 transition-colors group-hover:border-liberty mb-6">
+                  <span className="font-accent text-[12px] font-semibold tracking-[0.1em] uppercase text-patriot transition-colors group-hover:text-liberty">
+                    /{role.number}
                   </span>
-                  <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-stone-400 group-hover:text-stone-200 transition-colors">
-                    {role.commitment}
-                  </span>
-                </div>
+                </span>
                 <h3
                   className={`font-display font-extrabold text-navy-900 group-hover:text-white transition-colors ${
                     idx === 0
-                      ? 'text-[28px] lg:text-[34px] leading-[1.15]'
-                      : 'text-[22px] leading-[1.25]'
+                      ? 'text-[26px] lg:text-[32px] leading-[1.15]'
+                      : 'text-[20px] leading-[1.25]'
                   }`}
                 >
                   {role.title}
                 </h3>
                 <p
                   className={`font-body leading-[1.65] text-ink/80 group-hover:text-stone-200 transition-colors ${
-                    idx === 0 ? 'text-[16px] mt-5 max-w-[52ch]' : 'text-[14px] mt-3 text-stone-600'
+                    idx === 0
+                      ? 'text-[16px] mt-4 max-w-[52ch]'
+                      : 'text-[14px] mt-3 text-stone-600'
                   }`}
                 >
                   {role.body}
@@ -166,44 +159,48 @@ const VolunteerPage = () => {
         />
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
-          <div className="grid grid-cols-12 gap-6 lg:gap-12">
-            <div className="col-span-12 lg:col-span-5">
-              <p className="brand-section-label text-gold mb-8">/032 — From the Field</p>
-              <h2
-                className="font-display font-black leading-[1.1] tracking-[-0.02em] text-white"
-                style={{ fontSize: 'clamp(2rem, 3.25vw, 3rem)' }}
-              >
-                The people who{' '}
-                <em className="not-italic italic text-liberty">showed up.</em>
-              </h2>
-              <p className="mt-6 text-[16px] leading-[1.8] text-stone-200 font-light max-w-md">
-                Volunteers who joined this campaign — in their own words.
-              </p>
+          <div className="grid grid-cols-12 gap-6 lg:gap-12 items-center">
+            <div className="col-span-12 lg:col-span-7">
+              <p className="brand-section-label text-gold mb-6">/032 — Caucus Counterattack</p>
+
+              <figure className="relative bg-navy-800 border-l-4 border-patriot rounded-[4px] p-8 lg:p-10 max-w-2xl">
+                <span
+                  aria-hidden="true"
+                  className="absolute -top-4 left-8 text-[60px] leading-none font-display font-black text-liberty/60 select-none"
+                >
+                  &ldquo;
+                </span>
+                <blockquote className="font-display italic font-bold text-[22px] lg:text-[26px] leading-[1.35] text-white pt-2">
+                  Please become a MNGOP delegate for Royce White. Help me get the 2026 MNGOP
+                  endorsement for Senate. It&rsquo;s easy &mdash; sign up here and we&rsquo;ll
+                  contact you about how. Thank you!
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-3">
+                  <span className="h-[1px] w-8 bg-stone-400" />
+                  <span className="font-accent text-[11px] font-semibold tracking-[0.2em] uppercase text-stone-400">
+                    Royce White
+                  </span>
+                </figcaption>
+              </figure>
             </div>
 
-            <div className="col-span-12 lg:col-span-7 space-y-6">
-              {TESTIMONIALS.map((t) => (
-                <figure
-                  key={t.name}
-                  className="relative bg-navy-800 border-l-4 border-patriot rounded-[4px] p-8 lg:p-10"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="absolute -top-4 left-8 text-[60px] leading-none font-display font-black text-liberty/60 select-none"
-                  >
-                    "
-                  </span>
-                  <blockquote className="font-display italic font-bold text-[22px] lg:text-[24px] leading-[1.35] text-white pt-2">
-                    {t.quote}
-                  </blockquote>
-                  <figcaption className="mt-6 flex items-center gap-3">
-                    <span className="h-[1px] w-8 bg-stone-400" />
-                    <span className="font-accent text-[11px] font-semibold tracking-[0.2em] uppercase text-stone-400">
-                      {t.name} · {t.city}
-                    </span>
-                  </figcaption>
-                </figure>
-              ))}
+            <div className="col-span-12 lg:col-span-5">
+              <h3
+                className="font-display font-black leading-[1.05] tracking-[-0.02em] text-white"
+                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
+              >
+                The people are{' '}
+                <em className="not-italic italic text-liberty">coming.</em>
+              </h3>
+              <p className="mt-4 text-[16px] leading-[1.8] text-stone-200 font-light">
+                The Royce White campaign runs on Minnesotans &mdash; the ones who knock doors,
+                host house parties, print yard signs, and chip in a dollar when they can.
+              </p>
+              <div className="mt-8">
+                <BrandButton variant="ghost-light" href="#signup">
+                  Count Me In →
+                </BrandButton>
+              </div>
             </div>
           </div>
         </div>
@@ -219,7 +216,7 @@ const VolunteerPage = () => {
               className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900"
               style={{ fontSize: 'clamp(2rem, 3.25vw, 3rem)' }}
             >
-              Tell us what you're{' '}
+              Tell us what you&rsquo;re{' '}
               <em className="not-italic italic text-patriot">ready to do.</em>
             </h2>
           </div>
@@ -299,9 +296,24 @@ const VolunteerPage = () => {
               </div>
             </div>
 
+            <div className="mt-4">
+              <label
+                htmlFor="v-phone"
+                className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+              >
+                Mobile Phone
+              </label>
+              <input
+                id="v-phone"
+                name="phone"
+                type="tel"
+                className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
+              />
+            </div>
+
             <fieldset className="mt-6">
               <legend className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot mb-3">
-                What are you up for? (check all that apply)
+                Volunteer Opportunities (check all that apply)
               </legend>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {ROLES.map((role) => (
@@ -317,7 +329,6 @@ const VolunteerPage = () => {
                     />
                     <span className="font-body text-[14px] leading-[1.5] text-ink">
                       <span className="font-semibold text-navy-900">{role.title}</span>
-                      <span className="block text-stone-600 text-[13px]">{role.commitment}</span>
                     </span>
                   </label>
                 ))}
@@ -329,7 +340,7 @@ const VolunteerPage = () => {
                 htmlFor="v-note"
                 className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
               >
-                Anything else? (optional)
+                Write a comment
               </label>
               <textarea
                 id="v-note"
@@ -339,12 +350,25 @@ const VolunteerPage = () => {
               />
             </div>
 
+            <label className="mt-6 flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="sms-optin"
+                className="mt-1 h-4 w-4 accent-patriot"
+              />
+              <span className="text-[13px] leading-[1.6] text-ink/80 font-light">
+                SMS Opt In. By providing your telephone number, you consent to receive calls and
+                text messages. Msg &amp; data rates may apply. Msg frequency may vary. Reply
+                <strong> STOP</strong> to opt-out &amp; <strong>HELP</strong> for help.
+              </span>
+            </label>
+
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <BrandButton variant="primary" type="submit">
                 Count Me In →
               </BrandButton>
               <span className="font-mono text-[11px] tracking-[0.05em] uppercase text-stone-600">
-                A volunteer coordinator will reach out
+                The fight continues…
               </span>
             </div>
           </form>

@@ -39,16 +39,17 @@ const FightCallout = () => {
             </h2>
 
             <p className="mt-10 max-w-xl text-[18px] leading-[1.7] text-stone-200 font-light">
-              Senators should work for the people — not their own net worth. Royce White does not
-              answer to lobbyists, donors, or career politicians. He answers to Minnesotans.
+              Senators should work for the people, not their own net worth. We are yearning for
+              unwavering leadership that is resoundingly clear — leadership that is elected by the
+              people, not selected by elites who fatten their own pockets.
             </p>
 
             <div className="mt-12 flex flex-wrap gap-4">
-              <BrandButton variant="primary" href="/join">
+              <BrandButton variant="primary" href="/volunteer">
                 Get Involved →
               </BrandButton>
-              <BrandButton variant="ghost-light" href="/donate">
-                Chip In
+              <BrandButton variant="ghost-light" href="/contact">
+                Contact Us
               </BrandButton>
             </div>
           </div>

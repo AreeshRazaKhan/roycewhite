@@ -1,18 +1,18 @@
 const STATS = [
   {
-    value: '87',
-    unit: 'Counties Visited',
-    body: "A genuine road trip across every Minnesota county — no flyover, no parachute candidates.",
+    value: '$36T',
+    unit: 'National Debt',
+    body: "You can't have a country $36 trillion in debt. This can be addressed on day 1 of Donald Trump's presidency.",
   },
   {
-    value: '120+',
-    unit: 'Town Halls',
-    body: 'Face-to-face with voters, from Iron Range diners to Twin Cities union halls.',
+    value: '97%',
+    unit: 'Antibiotics From China',
+    body: 'We have killed a large percentage of our manufacturing jobs, and 97% of antibiotics consumed here at home are imported from China. Enough.',
   },
   {
-    value: '0%',
-    unit: 'Corporate PAC',
-    body: 'Zero corporate PAC dollars. This seat is not for sale — and never will be.',
+    value: '3',
+    unit: 'Top Priorities',
+    body: 'Border. Debt. Forever Wars. Three issues inextricably linked — and three issues that can change the value of American citizenship.',
   },
 ]
 
@@ -42,7 +42,7 @@ const StatsSection = () => {
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 lg:col-span-4">
             <p className="brand-section-label text-gold">
-              /006 — The Ground Game
+              /006 — Border · Debt · Forever Wars
             </p>
           </div>
           <div className="col-span-12 lg:col-span-8">
@@ -50,7 +50,7 @@ const StatsSection = () => {
               className="font-display font-black leading-[1.05] tracking-[-0.02em] text-white"
               style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)' }}
             >
-              Built by <em className="not-italic italic text-liberty">Minnesotans.</em> Funded by <em className="not-italic italic text-liberty">Minnesotans.</em>
+              My top priorities are the <em className="not-italic italic text-liberty">border, debt,</em> and <em className="not-italic italic text-liberty">forever wars.</em>
             </h2>
           </div>
         </div>

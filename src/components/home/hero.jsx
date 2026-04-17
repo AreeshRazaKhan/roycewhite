@@ -68,13 +68,15 @@ const Hero = () => {
             </h1>
 
             <p className="mt-10 max-w-xl text-[17px] leading-[1.8] text-stone-200 font-light">
-              Our nation is being held hostage by corrupt individuals who manipulate the truth,
-              exploit our children, and sow discord to keep us divided. Royce White is running for
-              U.S. Senate to take the fight to the swamp — and bring the seat back to Minnesota.
+              Regardless of our individual backgrounds or beliefs, our nation is being held
+              hostage by corrupt individuals who aim to manipulate the truth, exploit our
+              children, subjugate us through crises and pharmaceuticals, and sow discord to keep
+              us divided. Politicians like Tina Smith, who take orders from these corrupt
+              powers, must be removed from positions of influence.
             </p>
 
             <div className="mt-12 flex flex-wrap gap-4">
-              <BrandButton variant="primary" href="/join">
+              <BrandButton variant="primary" href="/volunteer">
                 Join the Movement →
               </BrandButton>
               <BrandButton variant="ghost-light" href="/about">
@@ -84,29 +86,29 @@ const Hero = () => {
 
             <div className="brand-rule-gradient mt-16" />
 
-            <dl className="mt-10 grid grid-cols-3 gap-6 max-w-lg">
+            <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
               <div>
                 <dt className="font-accent text-[11px] font-medium tracking-[0.14em] uppercase text-stone-400">
-                  Counties
+                  Identity
                 </dt>
-                <dd className="font-display font-black text-[44px] leading-none text-white mt-2">
-                  87
+                <dd className="font-display font-black italic text-[24px] leading-[1.1] text-white mt-2">
+                  Smash Mouth <span className="text-patriot">Populism</span>
                 </dd>
               </div>
               <div>
                 <dt className="font-accent text-[11px] font-medium tracking-[0.14em] uppercase text-stone-400">
-                  Town Halls
+                  Mission
                 </dt>
-                <dd className="font-display font-black text-[44px] leading-none text-white mt-2">
-                  120+
+                <dd className="font-display font-black italic text-[24px] leading-[1.1] text-white mt-2">
+                  Fighting for <span className="text-liberty">Freedom</span>
                 </dd>
               </div>
               <div>
                 <dt className="font-accent text-[11px] font-medium tracking-[0.14em] uppercase text-stone-400">
-                  Corp PAC
+                  Values
                 </dt>
-                <dd className="font-display font-black text-[44px] leading-none text-white mt-2">
-                  0%
+                <dd className="font-display font-black italic text-[24px] leading-[1.1] text-white mt-2">
+                  God · Family · <span className="text-patriot">Country</span>
                 </dd>
               </div>
             </dl>

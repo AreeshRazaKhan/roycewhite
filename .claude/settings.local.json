@@ -25,7 +25,12 @@
       "Bash(cp /tmp/rw.html /c/Users/Dev/AppData/Local/Temp/rw.html)",
       "Read(//c/Users/Dev/AppData/Local/Temp/**)",
       "Bash(npx playwright *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(ping -n 2 roycewhite.us)",
+      "Bash(powershell.exe *)",
+      "Bash(cygpath -w /tmp/rw/home.html)",
+      "Bash(gh auth *)"
     ],
     "deny": []
   }

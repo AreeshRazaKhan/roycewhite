@@ -100,8 +100,8 @@ const AboutSection = () => {
               <BrandButton variant="navy" href="/about">
                 Read the Full Story
               </BrandButton>
-              <BrandButton variant="ghost" href="/issues">
-                Where He Stands →
+              <BrandButton variant="ghost" href="/ask-royce">
+                Straight Answers →
               </BrandButton>
             </div>
           </div>

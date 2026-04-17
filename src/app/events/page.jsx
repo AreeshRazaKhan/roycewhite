@@ -23,15 +23,15 @@ const EventsPage = () => {
   return (
     <PageShell>
       <PageHero
-        eyebrow="/events — On the Trail"
+        eyebrow="/events — Get Involved"
         number="050"
         title={
           <>
-            87 counties.{' '}
-            <em className="not-italic italic text-liberty">One open door.</em>
+            Join the{' '}
+            <em className="not-italic italic text-liberty">Volunteers&rsquo; Weekly Meeting.</em>
           </>
         }
-        lede="Royce takes the campaign to the people — not the other way around. Town halls, rallies, delegate trainings, and roundtables across Minnesota. Walk in. Shake hands. Ask the hard ones."
+        lede="Are you ready to take a stand and make a real difference? Your presence will help ignite the spark of change our nation needs. Learn to engage — discover effective strategies to rally your friends, family, and community behind the campaign."
       >
         <div className="flex flex-wrap gap-4">
           <BrandButton variant="primary" href={featured.rsvp}>
@@ -205,21 +205,21 @@ const EventsPage = () => {
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 items-center">
             <div className="col-span-12 lg:col-span-8">
-              <p className="brand-section-label text-gold mb-4">/052 — Host an Event</p>
+              <p className="brand-section-label text-gold mb-4">/052 — Get In Touch</p>
               <h2
                 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-white"
                 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.75rem)' }}
               >
-                Want Royce in your town?
+                We want to connect with you for the campaign and beyond.
               </h2>
               <p className="mt-4 text-[16px] leading-[1.8] text-stone-200 font-light max-w-xl">
-                We book house parties, small venues, and county-level rallies every week. Pitch
-                us your town and we&apos;ll see what&apos;s possible.
+                Tell us how you can participate. This is a populist movement, so naturally mine
+                is a populist campaign. Godspeed!
               </p>
             </div>
             <div className="col-span-12 lg:col-span-4 flex lg:justify-end">
               <BrandButton variant="primary" href="/contact">
-                Request an Event →
+                Contact Us →
               </BrandButton>
             </div>
           </div>

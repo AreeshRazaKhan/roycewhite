@@ -4,35 +4,35 @@ import IssueCard from '@/components/home/issue-card'
 const ISSUES = [
   {
     number: '01',
-    title: 'America First',
-    body: 'Put the American worker, family, and community before the donor class, the globalists, and the forever-war machine. Every vote Royce casts is measured against one test: does it serve Minnesotans, and Americans, first?',
+    title: 'Term Limits',
+    body: 'The first bill I hope to bring is one that will limit my own ability to become a career politician. We need term limits in the House and Senate — long overdue. A maximum of 12 years in either body.',
     pullQuote: "What's wrong with taking care of Americans first?",
-    stat: { value: '#1', label: 'Governing priority for every vote on the Senate floor' },
+    stat: { value: '12', label: 'Year maximum term limit in either body of Congress' },
   },
   {
     number: '02',
-    title: 'Secure the Border',
-    body: 'End the invasion. Deport criminal aliens. Finish the wall. Fund American communities before anyone else.',
+    title: 'Election Integrity',
+    body: 'A dire concern over the security of our elections. Single-day voting, paper ballots, personal identification — and a national holiday to encourage and support voter participation and security.',
   },
   {
     number: '03',
-    title: 'End the Globalist Agenda',
-    body: 'The global affects the local. Reject the WEF, WHO, and every institution designed to trade American sovereignty for a seat at their table.',
+    title: 'American Manufacturing',
+    body: "American manufacturing, or the lack thereof, is a source of economic instability. America must become independent — rebuild as an equity society. Our manufacturing and supply chains are a matter of national security.",
   },
   {
     number: '04',
-    title: 'Second Amendment',
-    body: 'The right to bear arms is not negotiable. No red flag laws, no registries, no compromise on the rights of law-abiding Minnesotans.',
+    title: 'Pro 2A',
+    body: 'The 2nd Amendment is a constitutional right that can never be infringed upon. It is one of the most important political mechanisms to safeguard the freedoms of citizens in this country.',
   },
   {
     number: '05',
-    title: 'End the Forever Wars',
-    body: 'Not one more drop of Minnesotan blood for foreign entanglements that never served Americans. Peace through sovereignty.',
+    title: 'Energy Independence',
+    body: 'Our society relies on energy to function. Being energy independent protects our citizens and our nation — and helps us avoid the temptation to get involved in military conflicts to support our energy needs.',
   },
   {
     number: '06',
-    title: 'Restore the Family',
-    body: "Parents' rights in schools. Protect kids from ideological capture. Defend the unborn. Families are the foundation of a free nation.",
+    title: 'No Taxes (American Jubilee)',
+    body: 'Taxes in our country are out of control. I want to cut taxes for as many Americans as possible, from as many places as possible — and end the justification for the continued expansion of the administrative state.',
   },
 ]
 
@@ -89,8 +89,8 @@ const IssuesSection = () => {
         </div>
 
         <div className="mt-12 flex justify-end">
-          <BrandButton variant="navy" href="/issues">
-            All Positions →
+          <BrandButton variant="navy" href="/ask-royce">
+            Straight Answers →
           </BrandButton>
         </div>
       </div>

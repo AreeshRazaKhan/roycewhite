@@ -11,15 +11,10 @@ import { cn } from '@/lib/utils'
 
 const PRIMARY_LINKS = [
   { href: '/about', label: 'About' },
-  { href: '/issues', label: 'Issues' },
   { href: '/events', label: 'Events' },
   { href: '/volunteer', label: 'Volunteer' },
   { href: '/ask-royce', label: 'Ask Royce' },
-  { href: '/news', label: 'News' },
-  { href: '/endorsements', label: 'Endorsements' },
-  { href: '/faqs', label: 'FAQs' },
   { href: '/contact', label: 'Contact' },
-  { href: '/shop', label: 'Shop' },
 ]
 
 const MobileNav = ({ className }) => {
@@ -119,19 +114,19 @@ const MobileNav = ({ className }) => {
         <div className="mt-10 flex flex-col gap-4">
           <BrandButton
             variant="primary"
-            href="/donate"
+            href="/volunteer"
             onClick={() => setOpen(false)}
             className="justify-center"
           >
-            Donate →
+            Join the Movement →
           </BrandButton>
           <BrandButton
             variant="ghost-light"
-            href="/join"
+            href="/contact"
             onClick={() => setOpen(false)}
             className="justify-center"
           >
-            Join the Movement
+            Get In Touch
           </BrandButton>
         </div>
 

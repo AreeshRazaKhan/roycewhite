@@ -6,13 +6,9 @@ import MobileNav from '@/components/brand/mobile-nav'
 
 const NAV_ITEMS = [
   { href: '/about', label: 'About' },
-  { href: '/issues', label: 'Issues' },
   { href: '/events', label: 'Events' },
   { href: '/volunteer', label: 'Volunteer' },
   { href: '/ask-royce', label: 'Ask Royce' },
-  { href: '/news', label: 'News' },
-  { href: '/endorsements', label: 'Endorsements' },
-  { href: '/faqs', label: 'FAQs' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -25,7 +21,7 @@ const SiteHeader = () => {
       >
         <LogoLockup size="xs" />
 
-        <ul className="hidden xl:flex items-center gap-5 2xl:gap-6">
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-8">
           {NAV_ITEMS.map((item) => (
             <li key={item.href}>
               <Link
@@ -39,18 +35,12 @@ const SiteHeader = () => {
         </ul>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/shop"
-            className="hidden xl:inline-block font-accent text-[12px] font-medium tracking-[0.14em] uppercase text-moonlight hover:text-liberty transition-colors"
-          >
-            Shop
-          </Link>
           <BrandButton
             variant="primary"
-            href="/donate"
+            href="/volunteer"
             className="hidden md:inline-flex !px-6 !py-3"
           >
-            Donate
+            Join the Movement
           </BrandButton>
           <MobileNav />
         </div>

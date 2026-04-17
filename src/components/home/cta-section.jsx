@@ -50,16 +50,17 @@ const CtaSection = () => {
         </h2>
 
         <p className="mt-8 max-w-2xl mx-auto text-[18px] leading-[1.8] text-stone-200 font-light">
-          This seat belongs to Minnesota — not to the donor class, not to the swamp, not to Tina
-          Smith's machine. Help us take it back, one door, one dollar, one neighbor at a time.
+          Politicians like Tina Smith, who take orders from corrupt powers, must be removed from
+          positions of influence. Help us bring value back to your citizenship — and send a senator
+          who answers to Minnesotans.
         </p>
 
         <div className="mt-14 flex flex-wrap gap-4 justify-center">
-          <BrandButton variant="primary" href="/join">
+          <BrandButton variant="primary" href="/volunteer">
             Join the Movement →
           </BrandButton>
-          <BrandButton variant="gold" href="/donate">
-            Donate Now
+          <BrandButton variant="gold" href="/contact">
+            Get Involved
           </BrandButton>
         </div>
 

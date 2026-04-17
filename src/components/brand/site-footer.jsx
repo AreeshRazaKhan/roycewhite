@@ -4,25 +4,13 @@ import LogoLockup from '@/components/brand/logo-lockup'
 
 const EXPLORE_LINKS = [
   { href: '/about', label: 'About' },
-  { href: '/issues', label: 'Issues' },
-  { href: '/news', label: 'News' },
-  { href: '/calendar', label: 'Calendar' },
-  { href: '/endorsements', label: 'Endorsements' },
-  { href: '/faqs', label: 'FAQs' },
+  { href: '/events', label: 'Events' },
+  { href: '/ask-royce', label: 'Ask Royce' },
 ]
 
 const ACTION_LINKS = [
   { href: '/volunteer', label: 'Volunteer' },
-  { href: '/donate', label: 'Donate' },
-  { href: '/shop', label: 'Shop' },
   { href: '/contact', label: 'Contact' },
-]
-
-const LEGAL_LINKS = [
-  { href: '/terms', label: 'Terms & Conditions' },
-  { href: '/mobile-email-policy', label: 'Mobile & Email Policy' },
-  { href: '/ada', label: 'ADA' },
-  { href: '/privacy', label: 'Privacy Policy' },
 ]
 
 const SOCIAL_LINKS = [
@@ -111,20 +99,6 @@ const SiteFooter = () => {
             </ul>
           </div>
 
-          <div className="col-span-6 md:col-span-8 lg:col-span-2">
-            <p className="font-accent text-[11px] font-semibold tracking-[0.2em] uppercase text-moonlight mb-5">
-              Legal
-            </p>
-            <ul className="space-y-3 text-[14px]">
-              {LEGAL_LINKS.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="hover:text-liberty transition-colors">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <div className="mt-16 pt-6 border-t border-hairline/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
