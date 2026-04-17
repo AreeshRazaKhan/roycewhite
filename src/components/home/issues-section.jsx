@@ -1,0 +1,101 @@
+import BrandButton from '@/components/brand/brand-button'
+import IssueCard from '@/components/home/issue-card'
+
+const ISSUES = [
+  {
+    number: '01',
+    title: 'America First',
+    body: 'Put the American worker, family, and community before the donor class, the globalists, and the forever-war machine. Every vote Royce casts is measured against one test: does it serve Minnesotans, and Americans, first?',
+    pullQuote: "What's wrong with taking care of Americans first?",
+    stat: { value: '#1', label: 'Governing priority for every vote on the Senate floor' },
+  },
+  {
+    number: '02',
+    title: 'Secure the Border',
+    body: 'End the invasion. Deport criminal aliens. Finish the wall. Fund American communities before anyone else.',
+  },
+  {
+    number: '03',
+    title: 'End the Globalist Agenda',
+    body: 'The global affects the local. Reject the WEF, WHO, and every institution designed to trade American sovereignty for a seat at their table.',
+  },
+  {
+    number: '04',
+    title: 'Second Amendment',
+    body: 'The right to bear arms is not negotiable. No red flag laws, no registries, no compromise on the rights of law-abiding Minnesotans.',
+  },
+  {
+    number: '05',
+    title: 'End the Forever Wars',
+    body: 'Not one more drop of Minnesotan blood for foreign entanglements that never served Americans. Peace through sovereignty.',
+  },
+  {
+    number: '06',
+    title: 'Restore the Family',
+    body: "Parents' rights in schools. Protect kids from ideological capture. Defend the unborn. Families are the foundation of a free nation.",
+  },
+]
+
+const IssuesSection = () => {
+  return (
+    <section id="issues" className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 brand-grid-overlay-light opacity-60 pointer-events-none"
+      />
+
+      <span
+        aria-hidden="true"
+        className="brand-section-number hidden lg:block text-patriot/[0.06]"
+        style={{ top: '60px', right: '40px', fontSize: '200px' }}
+      >
+        003
+      </span>
+
+      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
+        <div className="grid grid-cols-12 gap-6 mb-16">
+          <div className="col-span-12 lg:col-span-4">
+            <p className="brand-section-label text-patriot">
+              /003 — Royce on the Issues
+            </p>
+          </div>
+          <div className="col-span-12 lg:col-span-8">
+            <h2
+              className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900"
+              style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)' }}
+            >
+              No focus groups.{' '}
+              <em className="not-italic italic text-patriot">No consultants.</em>{' '}
+              Just the truth, told plain.
+            </h2>
+            <p className="mt-6 text-[17px] leading-[1.8] text-ink/80 font-light max-w-2xl">
+              Six plain-spoken positions on the issues Washington keeps dodging. Read them. Share
+              them. Hold Royce accountable to them.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-12 gap-6">
+          <IssueCard
+            {...ISSUES[0]}
+            featured
+            className="col-span-12 lg:col-span-8 lg:row-span-2"
+          />
+          <IssueCard {...ISSUES[1]} className="col-span-12 md:col-span-6 lg:col-span-4" />
+          <IssueCard {...ISSUES[2]} className="col-span-12 md:col-span-6 lg:col-span-4" />
+          <IssueCard {...ISSUES[3]} className="col-span-12 md:col-span-6 lg:col-span-4" />
+          <IssueCard {...ISSUES[4]} className="col-span-12 md:col-span-6 lg:col-span-4" />
+          <IssueCard {...ISSUES[5]} className="col-span-12 md:col-span-6 lg:col-span-4" />
+        </div>
+
+        <div className="mt-12 flex justify-end">
+          <BrandButton variant="navy" href="/issues">
+            All Positions →
+          </BrandButton>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default IssuesSection

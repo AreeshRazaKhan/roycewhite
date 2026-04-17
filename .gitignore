@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# audit artifacts (regenerable via scripts/, bulky, not for /public)
+/public/audit/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

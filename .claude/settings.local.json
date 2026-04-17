@@ -5,7 +5,27 @@
       "Bash(npx --yes create-next-app@latest . --js --tailwind --app --src-dir --eslint --import-alias \"@/*\" --no-turbopack --use-npm --no-git --yes)",
       "Bash(npx --yes shadcn@latest init --yes --base-color neutral)",
       "Bash(npx --yes shadcn@latest init --help)",
-      "Bash(npx --yes shadcn@latest init -d --force)"
+      "Bash(npx --yes shadcn@latest init -d --force)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000 -o /tmp/page.html -w \"HTTP %{http_code}\\\\n\")",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(xargs -I {} curl -s \"http://localhost:3000{}\")",
+      "Bash(curl -s http://localhost:3000 -o /dev/null -w \"HTTP %{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:3002 -o /dev/null -w \"3002 HTTP %{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:3002)",
+      "Bash(curl -s 'http://localhost:3002/_next/static/chunks/%5Broot-of-the-server%5D__0pc4w0h._.css')",
+      "Bash(taskkill //F //PID 14244)",
+      "Bash(taskkill //F //PID 17024)",
+      "Bash(xargs -I {} curl -s \"http://localhost:3000{}\" -o /tmp/live.css)",
+      "WebFetch(domain:roycewhite.us)",
+      "Bash(curl *)",
+      "Bash(node *)",
+      "Bash(cp /tmp/rw.html /c/Users/Dev/AppData/Local/Temp/rw.html)",
+      "Read(//c/Users/Dev/AppData/Local/Temp/**)",
+      "Bash(npx playwright *)",
+      "Bash(git add *)"
     ],
     "deny": []
   }
