@@ -142,9 +142,6 @@
   animation: brand-marquee 30s linear infinite;
 }
 
-.brand-btn-clip {
-  clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
-}
 
 .brand-grid-overlay {
   background-image:
