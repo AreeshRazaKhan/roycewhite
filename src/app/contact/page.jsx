@@ -20,6 +20,21 @@ const CONTACT_LINES = [
     value: '218-686-3970',
     href: 'tel:2186863970',
   },
+  {
+    label: 'Press Email',
+    value: 'press@roycewhite.us',
+    href: 'mailto:press@roycewhite.us',
+  },
+  {
+    label: 'Events Email',
+    value: 'events@roycewhite.us',
+    href: 'mailto:events@roycewhite.us',
+  },
+  {
+    label: 'General Email',
+    value: 'info@roycewhite.us',
+    href: 'mailto:info@roycewhite.us',
+  },
 ]
 
 const VOLUNTEER_OPPORTUNITIES = [
@@ -48,7 +63,7 @@ const ContactPage = () => {
         lede="We want to hear from you. This is a populist movement, so naturally mine is a populist campaign. Godspeed!"
       />
 
-      <section className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
         <div
           aria-hidden="true"
           className="absolute inset-0 brand-grid-overlay-light opacity-60 pointer-events-none"
@@ -90,12 +105,15 @@ const ContactPage = () => {
                       aria-hidden="true"
                       className="absolute top-0 left-0 w-[3px] h-8 bg-patriot"
                     />
-                    <dt className="font-accent text-[11px] font-semibold tracking-[0.18em] uppercase text-patriot">
+                    <dt className="font-accent text-[12px] font-semibold tracking-[0.18em] uppercase text-patriot">
                       {line.label}
                     </dt>
                     <dd className="mt-2 font-display font-bold text-[18px] leading-[1.4] text-navy-900 whitespace-pre-line">
                       {line.href ? (
-                        <a href={line.href} className="hover:text-patriot transition-colors">
+                        <a
+                          href={line.href}
+                          className="inline-flex items-center min-h-11 hover:text-patriot transition-colors duration-500 ease-out"
+                        >
                           {line.value}
                         </a>
                       ) : (
@@ -106,7 +124,7 @@ const ContactPage = () => {
                 ))}
               </dl>
 
-              <p className="mt-10 font-mono text-[11px] tracking-[0.18em] uppercase text-stone-600">
+              <p className="mt-10 font-mono text-[12px] tracking-[0.18em] uppercase text-ink/80">
                 Paid for by Royce White For Senate
               </p>
             </div>
@@ -121,7 +139,7 @@ const ContactPage = () => {
                   className="absolute top-0 left-0 w-[3px] h-16 bg-patriot"
                 />
 
-                <p className="font-accent text-[11px] font-semibold tracking-[0.2em] uppercase text-patriot mb-2">
+                <p className="font-accent text-[12px] font-semibold tracking-[0.2em] uppercase text-patriot mb-2">
                   Join Royce
                 </p>
                 <p className="font-display font-extrabold text-[28px] leading-[1.1] text-navy-900 mb-8">
@@ -132,7 +150,7 @@ const ContactPage = () => {
                   <div>
                     <label
                       htmlFor="c-first"
-                      className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                      className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                     >
                       First Name
                     </label>
@@ -147,7 +165,7 @@ const ContactPage = () => {
                   <div>
                     <label
                       htmlFor="c-last"
-                      className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                      className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                     >
                       Last Name
                     </label>
@@ -165,7 +183,7 @@ const ContactPage = () => {
                   <div>
                     <label
                       htmlFor="c-email"
-                      className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                      className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                     >
                       Email
                     </label>
@@ -180,7 +198,7 @@ const ContactPage = () => {
                   <div>
                     <label
                       htmlFor="c-zip"
-                      className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                      className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                     >
                       Zip Code
                     </label>
@@ -197,9 +215,9 @@ const ContactPage = () => {
                 <div className="mt-4">
                   <label
                     htmlFor="c-phone"
-                    className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                    className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                   >
-                    Mobile Phone
+                    Mobile Phone <span className="font-normal normal-case tracking-normal text-stone-600">(optional)</span>
                   </label>
                   <input
                     id="c-phone"
@@ -210,14 +228,14 @@ const ContactPage = () => {
                 </div>
 
                 <fieldset className="mt-6">
-                  <legend className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot mb-3">
+                  <legend className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot mb-3">
                     Volunteer Opportunities (check all that apply)
                   </legend>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     {VOLUNTEER_OPPORTUNITIES.map((opt) => (
                       <label
                         key={opt}
-                        className="flex items-center gap-2 cursor-pointer p-3 rounded-[4px] hover:bg-parchment transition-colors"
+                        className="flex items-center gap-2 cursor-pointer p-3 rounded-[4px] hover:bg-parchment transition-colors duration-500 ease-out"
                       >
                         <input
                           type="checkbox"
@@ -236,7 +254,7 @@ const ContactPage = () => {
                 <div className="mt-4">
                   <label
                     htmlFor="c-message"
-                    className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                    className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                   >
                     Write a comment
                   </label>
@@ -265,7 +283,7 @@ const ContactPage = () => {
                   <BrandButton variant="primary" type="submit">
                     Send Message →
                   </BrandButton>
-                  <span className="font-mono text-[11px] tracking-[0.05em] uppercase text-stone-600">
+                  <span className="font-mono text-[12px] tracking-[0.05em] uppercase text-stone-600">
                     The fight continues…
                   </span>
                 </div>

@@ -2,14 +2,14 @@ import BrandButton from '@/components/brand/brand-button'
 
 const FightCallout = () => {
   return (
-    <section className="relative bg-navy-900 text-moonlight py-24 lg:py-32 overflow-hidden">
+    <section className="relative bg-navy-900 text-moonlight py-14 lg:py-32 overflow-hidden">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <span className="absolute left-0 top-[18%] h-[1px] w-[45%] opacity-[0.18]" style={{ background: 'linear-gradient(90deg, #D42027, transparent)' }} />
         <span className="absolute left-0 top-[26%] h-[1px] w-[28%] opacity-[0.15]" style={{ background: 'linear-gradient(90deg, #29ABE2, transparent)' }} />
         <span className="absolute left-0 top-[34%] h-[1px] w-[62%] opacity-[0.08]" style={{ background: 'linear-gradient(90deg, #D42027, transparent)' }} />
         <span className="absolute left-0 top-[42%] h-[1px] w-[18%] opacity-[0.18]" style={{ background: 'linear-gradient(90deg, #29ABE2, transparent)' }} />
         <span className="absolute left-0 top-[50%] h-[1px] w-[38%] opacity-[0.10]" style={{ background: 'linear-gradient(90deg, #D42027, transparent)' }} />
-        <span className="absolute right-[30px] top-[18%] font-mono text-[10px] tracking-[0.1em] uppercase text-stone-400">
+        <span className="absolute right-[30px] top-[18%] font-mono text-[12px] tracking-[0.1em] uppercase text-stone-200">
           SCORE · 2026
         </span>
       </div>
@@ -25,7 +25,7 @@ const FightCallout = () => {
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid grid-cols-12 gap-6 items-end">
           <div className="col-span-12 lg:col-span-7">
-            <p className="brand-section-label text-patriot mb-8">
+            <p className="brand-section-label text-liberty mb-8">
               /004 — The Fight
             </p>
 
@@ -60,7 +60,7 @@ const FightCallout = () => {
                 aria-hidden="true"
                 className="absolute top-0 left-0 w-[3px] h-16 bg-patriot"
               />
-              <p className="font-accent text-[11px] font-semibold tracking-[0.2em] uppercase text-liberty mb-6">
+              <p className="font-accent text-[12px] font-semibold tracking-[0.2em] uppercase text-liberty mb-6">
                 Identity
               </p>
               <p className="font-display font-black italic text-[38px] lg:text-[46px] leading-[0.95] tracking-[-0.02em] text-white">
@@ -77,7 +77,7 @@ const FightCallout = () => {
               </p>
               <div className="mt-10 flex items-center gap-3">
                 <span className="h-[1px] w-8 bg-stone-400" />
-                <span className="font-accent text-[11px] font-medium tracking-[0.2em] uppercase text-stone-400">
+                <span className="font-accent text-[12px] font-medium tracking-[0.2em] uppercase text-stone-200">
                   Royce White
                 </span>
               </div>

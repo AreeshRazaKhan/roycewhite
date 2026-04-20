@@ -1,9 +1,10 @@
+import Image from 'next/image'
+
 import BrandButton from '@/components/brand/brand-button'
-import PlaceholderImage from '@/components/brand/placeholder-image'
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+    <section id="about" className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
       <span
         aria-hidden="true"
         className="brand-section-number hidden lg:block text-navy-900/[0.04]"
@@ -16,14 +17,12 @@ const AboutSection = () => {
         <div className="grid grid-cols-12 gap-6 lg:gap-10">
           <div className="col-span-12 lg:col-span-5">
             <div className="relative aspect-[4/5] rounded-[4px] overflow-hidden border border-stone-200 brand-duotone">
-              <PlaceholderImage
-                width={720}
-                height={900}
-                label="Royce White"
-                bg="0A1628"
-                fg="EDEBE3"
-                alt="Portrait placeholder — replace with Royce White on the trail"
+              <Image
+                src="/royce-white-portrait.jpg"
+                alt="Royce White speaking at a rally at the Minnesota State Capitol"
+                fill
                 sizes="(min-width: 1024px) 560px, 100vw"
+                className="object-cover"
               />
 
               <span
@@ -36,19 +35,19 @@ const AboutSection = () => {
               />
 
               <div className="absolute top-6 right-6 text-right z-10">
-                <p className="font-accent text-[10px] font-medium tracking-[0.2em] uppercase text-stone-200">
-                  Portrait · MN 2026
+                <p className="font-accent text-[12px] font-medium tracking-[0.2em] uppercase text-stone-200">
+                  MN · 2026
                 </p>
               </div>
 
               <div className="absolute bottom-6 left-6 pr-10 z-10">
-                <p className="font-accent text-[10px] font-medium tracking-[0.22em] uppercase text-stone-200 mb-2">
+                <p className="font-accent text-[12px] font-medium tracking-[0.22em] uppercase text-stone-200 mb-2">
                   The Candidate
                 </p>
                 <p className="font-display italic font-bold text-[28px] leading-[1.1] text-white">
                   Royce <span className="text-liberty">White.</span>
                 </p>
-                <p className="font-accent text-[11px] font-medium tracking-[0.18em] uppercase text-stone-200 mt-2">
+                <p className="font-accent text-[12px] font-medium tracking-[0.18em] uppercase text-stone-200 mt-2">
                   Father · Patriot · Minnesotan
                 </p>
               </div>

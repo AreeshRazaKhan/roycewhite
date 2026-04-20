@@ -1,7 +1,8 @@
+import Image from 'next/image'
+
 import BrandButton from '@/components/brand/brand-button'
 import PageHero from '@/components/brand/page-hero'
 import PageShell from '@/components/brand/page-shell'
-import PlaceholderImage from '@/components/brand/placeholder-image'
 
 export const metadata = {
   title: 'About Royce — Royce White for U.S. Senate',
@@ -82,7 +83,7 @@ const AboutPage = () => {
         </div>
       </PageHero>
 
-      <section className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
         <span
           aria-hidden="true"
           className="brand-section-number hidden lg:block text-navy-900/[0.04]"
@@ -95,14 +96,12 @@ const AboutPage = () => {
           <div className="grid grid-cols-12 gap-6 lg:gap-12">
             <div className="col-span-12 lg:col-span-5">
               <div className="relative aspect-[4/5] rounded-[4px] overflow-hidden border border-stone-200 brand-duotone">
-                <PlaceholderImage
-                  width={720}
-                  height={900}
-                  label="Royce White"
-                  bg="0A1628"
-                  fg="EDEBE3"
-                  alt="Portrait placeholder — replace with Royce on the trail"
+                <Image
+                  src="/royce-white-portrait.jpg"
+                  alt="Royce White speaking at a rally at the Minnesota State Capitol"
+                  fill
                   sizes="(min-width: 1024px) 560px, 100vw"
+                  className="object-cover"
                 />
                 <span
                   aria-hidden="true"
@@ -113,7 +112,7 @@ const AboutPage = () => {
                   className="absolute bottom-5 right-5 w-[44px] h-[44px] border-b-2 border-r-2 border-liberty z-10"
                 />
                 <div className="absolute bottom-6 left-6 pr-10 z-10">
-                  <p className="font-accent text-[10px] font-medium tracking-[0.22em] uppercase text-stone-200 mb-2">
+                  <p className="font-accent text-[12px] font-medium tracking-[0.22em] uppercase text-stone-200 mb-2">
                     The Candidate
                   </p>
                   <p className="font-display italic font-bold text-[28px] leading-[1.1] text-white">
@@ -170,7 +169,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="relative bg-navy-900 text-moonlight py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-navy-900 text-moonlight py-14 lg:py-32 overflow-hidden">
         <div
           aria-hidden="true"
           className="absolute inset-0 brand-grid-overlay opacity-[0.04] pointer-events-none"
@@ -230,7 +229,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
         <div
           aria-hidden="true"
           className="absolute inset-0 brand-grid-overlay-light opacity-60 pointer-events-none"
@@ -262,7 +261,7 @@ const AboutPage = () => {
                   aria-hidden="true"
                   className="absolute top-0 left-0 w-[3px] h-12 bg-patriot"
                 />
-                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-patriot mb-3">
+                <p className="font-mono text-[12px] tracking-[0.18em] uppercase text-patriot mb-3">
                   /{String(idx + 1).padStart(2, '0')}
                 </p>
                 <h3 className="font-display font-extrabold text-[24px] lg:text-[28px] leading-[1.2] text-navy-900">
@@ -277,7 +276,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="relative bg-navy-900 text-moonlight py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-navy-900 text-moonlight py-14 lg:py-28 overflow-hidden">
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12 text-center">
           <p className="brand-section-label text-gold justify-center mb-6 inline-flex">
             /014 — The Fight Continues…

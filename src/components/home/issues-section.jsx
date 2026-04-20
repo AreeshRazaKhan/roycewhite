@@ -38,7 +38,7 @@ const ISSUES = [
 
 const IssuesSection = () => {
   return (
-    <section id="issues" className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+    <section id="issues" className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute inset-0 brand-grid-overlay-light opacity-60 pointer-events-none"

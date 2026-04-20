@@ -4,7 +4,7 @@ import BrandButton from '@/components/brand/brand-button'
 
 const JoinFormSection = () => {
   return (
-    <section id="join" className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+    <section id="join" className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute inset-0 brand-grid-overlay-light opacity-70 pointer-events-none"
@@ -46,16 +46,15 @@ const JoinFormSection = () => {
               </p>
               <div className="mt-6 flex items-center gap-3">
                 <span className="h-[1px] w-8 bg-stone-400" />
-                <span className="font-accent text-[11px] font-semibold tracking-[0.2em] uppercase text-stone-400">
+                <span className="font-accent text-[12px] font-semibold tracking-[0.2em] uppercase text-stone-200">
                   Royce White
                 </span>
               </div>
             </div>
 
             <p className="mt-10 text-[16px] leading-[1.8] text-ink/80 font-light max-w-xl">
-              The Royce White campaign runs on Minnesotans — the ones who knock doors, host house
-              parties, print yard signs, and chip in a dollar when they can. Every name on this form
-              is one more person the swamp has to answer to.
+              This is a populist movement, so naturally mine is a populist campaign. Every name
+              on this form is one more person the swamp has to answer to.
             </p>
           </div>
 
@@ -69,7 +68,7 @@ const JoinFormSection = () => {
                 className="absolute top-0 left-0 w-[3px] h-16 bg-patriot"
               />
 
-              <p className="font-accent text-[11px] font-semibold tracking-[0.2em] uppercase text-patriot mb-2">
+              <p className="font-accent text-[12px] font-semibold tracking-[0.2em] uppercase text-patriot mb-2">
                 Join Royce
               </p>
               <p className="font-display font-extrabold text-[28px] leading-[1.1] text-navy-900 mb-8">
@@ -80,7 +79,7 @@ const JoinFormSection = () => {
                 <div>
                   <label
                     htmlFor="first-name"
-                    className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                    className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                   >
                     First Name
                   </label>
@@ -95,7 +94,7 @@ const JoinFormSection = () => {
                 <div>
                   <label
                     htmlFor="last-name"
-                    className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                    className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                   >
                     Last Name
                   </label>
@@ -112,7 +111,7 @@ const JoinFormSection = () => {
               <div className="mt-4">
                 <label
                   htmlFor="email"
-                  className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                  className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                 >
                   Email
                 </label>
@@ -129,9 +128,9 @@ const JoinFormSection = () => {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                    className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                   >
-                    Phone
+                    Phone <span className="font-normal normal-case tracking-normal text-stone-600">(optional)</span>
                   </label>
                   <input
                     id="phone"
@@ -143,7 +142,7 @@ const JoinFormSection = () => {
                 <div>
                   <label
                     htmlFor="zip"
-                    className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                    className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                   >
                     Zip Code
                   </label>
@@ -173,7 +172,7 @@ const JoinFormSection = () => {
                 <BrandButton variant="primary" type="submit">
                   Sign Me Up →
                 </BrandButton>
-                <span className="font-mono text-[11px] tracking-[0.05em] uppercase text-stone-600">
+                <span className="font-mono text-[12px] tracking-[0.05em] uppercase text-stone-600">
                   Secured via campaign compliance
                 </span>
               </div>

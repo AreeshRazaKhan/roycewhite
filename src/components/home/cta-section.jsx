@@ -65,15 +65,15 @@ const CtaSection = () => {
         </div>
 
         <div className="mt-16 inline-flex items-center gap-6 border-t border-hairline/50 pt-6">
-          <span className="font-accent text-[11px] font-medium tracking-[0.24em] uppercase text-stone-400">
+          <span className="font-accent text-[12px] font-medium tracking-[0.24em] uppercase text-stone-200">
             God
           </span>
           <span className="w-1 h-1 rounded-full bg-patriot" />
-          <span className="font-accent text-[11px] font-medium tracking-[0.24em] uppercase text-stone-400">
+          <span className="font-accent text-[12px] font-medium tracking-[0.24em] uppercase text-stone-200">
             Family
           </span>
           <span className="w-1 h-1 rounded-full bg-liberty" />
-          <span className="font-accent text-[11px] font-medium tracking-[0.24em] uppercase text-stone-400">
+          <span className="font-accent text-[12px] font-medium tracking-[0.24em] uppercase text-stone-200">
             Country
           </span>
         </div>

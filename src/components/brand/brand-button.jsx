@@ -14,7 +14,7 @@ const VARIANT_STYLES = {
 }
 
 const BASE =
-  'inline-flex items-center justify-center gap-2 font-accent text-[12px] font-semibold tracking-[0.12em] uppercase px-8 py-4 border-[1.5px] transition-colors duration-150 ease-out min-h-[44px] brand-btn-clip'
+  'inline-flex items-center justify-center gap-2 font-accent text-[12px] font-semibold tracking-[0.12em] uppercase px-8 py-4 border-[1.5px] transition-[background-color,color,border-color] duration-500 ease-out min-h-[44px] brand-btn-clip'
 
 const isExternal = (href) => /^https?:\/\//.test(href)
 

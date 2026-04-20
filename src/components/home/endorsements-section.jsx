@@ -2,7 +2,7 @@ import EndorsementCard from '@/components/home/endorsement-card'
 
 const EndorsementsSection = () => {
   return (
-    <section id="endorsements" className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+    <section id="endorsements" className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
       <span
         aria-hidden="true"
         className="brand-section-number hidden lg:block text-navy-900/[0.04]"

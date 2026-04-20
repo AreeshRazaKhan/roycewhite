@@ -69,7 +69,7 @@ const MobileNav = ({ className }) => {
           type="button"
           onClick={() => setOpen(false)}
           aria-label="Close menu"
-          className="inline-flex h-11 w-11 items-center justify-center text-moonlight hover:text-liberty transition-colors"
+          className="inline-flex h-11 w-11 items-center justify-center text-moonlight hover:text-liberty transition-colors duration-500 ease-out"
         >
           <span aria-hidden="true" className="relative block h-4 w-4">
             <span className="absolute left-0 top-[7px] h-[2px] w-full bg-current rotate-45" />
@@ -92,9 +92,9 @@ const MobileNav = ({ className }) => {
               <Link
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="group flex items-baseline gap-4 py-5 text-white hover:text-liberty transition-colors"
+                className="group flex items-baseline gap-4 py-5 text-white hover:text-liberty transition-colors duration-500 ease-out"
               >
-                <span className="font-mono text-[11px] font-medium tracking-[0.14em] text-stone-400 w-10">
+                <span className="font-mono text-[12px] font-medium tracking-[0.14em] text-stone-200 w-10">
                   /{String(idx + 1).padStart(2, '0')}
                 </span>
                 <span className="font-display font-black text-[32px] sm:text-[38px] leading-[1.0] tracking-[-0.02em]">
@@ -102,7 +102,7 @@ const MobileNav = ({ className }) => {
                 </span>
                 <span
                   aria-hidden="true"
-                  className="ml-auto font-accent text-[12px] font-semibold tracking-[0.18em] uppercase text-stone-400 group-hover:text-liberty transition-colors"
+                  className="ml-auto font-accent text-[12px] font-semibold tracking-[0.18em] uppercase text-stone-200 group-hover:text-liberty transition-colors duration-500 ease-out"
                 >
                   →
                 </span>
@@ -131,12 +131,12 @@ const MobileNav = ({ className }) => {
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/10">
-          <p className="font-accent text-[11px] font-medium tracking-[0.24em] uppercase text-stone-400">
+          <p className="font-accent text-[12px] font-medium tracking-[0.24em] uppercase text-stone-200">
             God · Family · Country
           </p>
           <a
             href="tel:2186863970"
-            className="mt-3 block font-mono text-[13px] text-stone-200 hover:text-liberty"
+            className="mt-3 inline-flex items-center py-2 min-h-11 font-mono text-[13px] text-stone-200 hover:text-liberty"
           >
             218-686-3970
           </a>
@@ -153,25 +153,25 @@ const MobileNav = ({ className }) => {
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-11 w-11 items-center justify-center text-moonlight hover:text-liberty transition-colors"
+        className="inline-flex h-11 w-11 items-center justify-center text-moonlight hover:text-liberty transition-colors duration-500 ease-out"
       >
         <span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
         <span aria-hidden="true" className="relative block h-4 w-6">
           <span
             className={cn(
-              'absolute left-0 right-0 h-[2px] bg-current transition-transform duration-200',
+              'absolute left-0 right-0 h-[2px] bg-current transition-transform duration-300 ease-out',
               open ? 'top-[7px] rotate-45' : 'top-0',
             )}
           />
           <span
             className={cn(
-              'absolute left-0 right-0 top-[7px] h-[2px] bg-current transition-opacity duration-150',
+              'absolute left-0 right-0 top-[7px] h-[2px] bg-current transition-opacity duration-300 ease-out',
               open ? 'opacity-0' : 'opacity-100',
             )}
           />
           <span
             className={cn(
-              'absolute left-0 right-0 h-[2px] bg-current transition-transform duration-200',
+              'absolute left-0 right-0 h-[2px] bg-current transition-transform duration-300 ease-out',
               open ? 'top-[7px] -rotate-45' : 'top-[14px]',
             )}
           />

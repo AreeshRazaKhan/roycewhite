@@ -30,7 +30,15 @@
       "Bash(ping -n 2 roycewhite.us)",
       "Bash(powershell.exe *)",
       "Bash(cygpath -w /tmp/rw/home.html)",
-      "Bash(gh auth *)"
+      "Bash(gh auth *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git clone *)",
+      "Bash(mkdir -p .claude/skills)",
+      "Bash(cp -r /tmp/playwright-skill-temp/skills/playwright-skill .claude/skills/)",
+      "Bash(cygpath -w /tmp)",
+      "Bash(git stash *)"
     ],
     "deny": []
   }

@@ -18,14 +18,14 @@ const STATS = [
 
 const StatsSection = () => {
   return (
-    <section className="relative bg-navy-900 text-moonlight py-24 lg:py-32 overflow-hidden">
+    <section className="relative bg-navy-900 text-moonlight py-14 lg:py-32 overflow-hidden">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <span className="absolute left-0 top-[22%] h-[1px] w-[45%] opacity-[0.18]" style={{ background: 'linear-gradient(90deg, #D42027, transparent)' }} />
         <span className="absolute left-0 top-[30%] h-[1px] w-[28%] opacity-[0.15]" style={{ background: 'linear-gradient(90deg, #29ABE2, transparent)' }} />
         <span className="absolute left-0 top-[38%] h-[1px] w-[62%] opacity-[0.08]" style={{ background: 'linear-gradient(90deg, #D42027, transparent)' }} />
         <span className="absolute left-0 top-[46%] h-[1px] w-[18%] opacity-[0.18]" style={{ background: 'linear-gradient(90deg, #29ABE2, transparent)' }} />
         <span className="absolute left-0 top-[54%] h-[1px] w-[38%] opacity-[0.10]" style={{ background: 'linear-gradient(90deg, #D42027, transparent)' }} />
-        <span className="absolute right-[40px] top-[20%] font-mono text-[10px] tracking-[0.12em] uppercase text-stone-400">
+        <span className="absolute right-[40px] top-[20%] font-mono text-[12px] tracking-[0.12em] uppercase text-stone-200">
           GROUND · TRUTH
         </span>
       </div>
@@ -67,7 +67,7 @@ const StatsSection = () => {
               >
                 {s.value}
               </div>
-              <div className="font-accent text-[12px] font-medium tracking-[0.14em] uppercase text-stone-400 mt-4">
+              <div className="font-accent text-[12px] font-medium tracking-[0.14em] uppercase text-stone-200 mt-4">
                 {s.unit}
               </div>
               <p className="font-body text-[16px] leading-[1.7] text-stone-200 mt-6 max-w-[30ch]">

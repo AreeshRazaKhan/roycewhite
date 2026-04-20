@@ -16,7 +16,7 @@ const LogoLockup = ({ size, className }) => {
     <Link
       href="/"
       aria-label="Royce White for U.S. Senate — home"
-      className={cn('inline-flex items-center', className)}
+      className={cn('inline-flex items-center min-h-11', className)}
     >
       <Image
         src="/logo-full-color-white.png"

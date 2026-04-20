@@ -26,7 +26,7 @@ const SiteHeader = () => {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="font-accent text-[12px] font-medium tracking-[0.14em] uppercase text-moonlight hover:text-liberty transition-colors whitespace-nowrap"
+                className="font-accent text-[12px] font-medium tracking-[0.14em] uppercase text-moonlight hover:text-liberty transition-colors duration-500 ease-out whitespace-nowrap"
               >
                 {item.label}
               </Link>

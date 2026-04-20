@@ -34,16 +34,16 @@ const EventsPage = () => {
         lede="Are you ready to take a stand and make a real difference? Your presence will help ignite the spark of change our nation needs. Learn to engage — discover effective strategies to rally your friends, family, and community behind the campaign."
       >
         <div className="flex flex-wrap gap-4">
-          <BrandButton variant="primary" href={featured.rsvp}>
-            RSVP Next Event →
+          <BrandButton variant="primary" href="/volunteer">
+            Volunteer with the Campaign
           </BrandButton>
-          <BrandButton variant="ghost-light" href="/volunteer">
-            Volunteer at an Event
+          <BrandButton variant="ghost-light" href="/contact">
+            Contact Us
           </BrandButton>
         </div>
       </PageHero>
 
-      <section className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
         <div
           aria-hidden="true"
           className="absolute inset-0 brand-grid-overlay-light opacity-60 pointer-events-none"
@@ -59,16 +59,19 @@ const EventsPage = () => {
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-16">
             <div className="col-span-12 lg:col-span-4">
-              <p className="brand-section-label text-patriot">/051 — Upcoming</p>
+              <p className="brand-section-label text-patriot">/051 — Latest past events</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <h2
                 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900"
                 style={{ fontSize: 'clamp(2.25rem, 3.75vw, 3.5rem)' }}
               >
-                Where Royce{' '}
-                <em className="not-italic italic text-patriot">shows up</em> next.
+                No upcoming events.{' '}
+                <em className="not-italic italic text-patriot">Check back soon.</em>
               </h2>
+              <p className="mt-6 max-w-[52ch] text-[16px] leading-[1.7] text-ink/70 font-light">
+                The Volunteers&rsquo; Weekly Meeting ran Wednesdays, 7:00–8:00 PM. Latest past sessions below.
+              </p>
             </div>
           </div>
 
@@ -76,7 +79,7 @@ const EventsPage = () => {
             {/* Featured event — 8/4 bento anchor */}
             <Link
               href={`/events/${featured.slug}`}
-              className="col-span-12 lg:col-span-8 lg:row-span-2 group relative bg-navy-900 text-moonlight border border-navy-900 rounded-[4px] p-10 lg:p-14 overflow-hidden flex flex-col"
+              className="col-span-12 lg:col-span-8 lg:row-span-2 group relative bg-navy-900 text-moonlight border border-navy-900 rounded-[4px] p-6 sm:p-10 lg:p-14 overflow-hidden flex flex-col"
             >
               <div
                 aria-hidden="true"
@@ -96,33 +99,33 @@ const EventsPage = () => {
               />
 
               <div className="relative z-10 flex items-center gap-4 mb-8">
-                <span className="font-accent text-[11px] font-semibold tracking-[0.2em] uppercase text-liberty">
+                <span className="font-accent text-[12px] font-semibold tracking-[0.2em] uppercase text-liberty">
                   Featured
                 </span>
                 <span className="h-[1px] flex-1 bg-white/10" />
-                <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-stone-400">
+                <span className="font-mono text-[12px] tracking-[0.14em] uppercase text-stone-200">
                   {featured.tag}
                 </span>
               </div>
 
-              <div className="relative z-10 flex items-start gap-8">
+              <div className="relative z-10 flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
                 <div className="shrink-0">
-                  <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-patriot mb-1">
+                  <p className="font-mono text-[12px] tracking-[0.18em] uppercase text-liberty mb-1">
                     {formatMonthDay(featured.dateLabel).month}
                   </p>
-                  <p className="font-display font-black text-[80px] leading-none text-white tracking-[-0.04em]">
+                  <p className="font-display font-black text-[64px] sm:text-[80px] leading-none text-white tracking-[-0.04em]">
                     {formatMonthDay(featured.dateLabel).day}
                   </p>
-                  <p className="font-accent text-[11px] font-medium tracking-[0.14em] uppercase text-stone-400 mt-2">
+                  <p className="font-accent text-[12px] font-medium tracking-[0.14em] uppercase text-stone-200 mt-2">
                     {featured.day}
                   </p>
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h3 className="font-display font-extrabold text-[30px] lg:text-[42px] leading-[1.1] text-white group-hover:text-liberty transition-colors">
+                  <h3 className="font-display font-extrabold text-[30px] lg:text-[42px] leading-[1.1] text-white group-hover:text-liberty transition-colors duration-700 ease-out">
                     {featured.title}
                   </h3>
                   <p className="mt-3 font-accent text-[12px] font-semibold tracking-[0.18em] uppercase text-stone-200">
-                    {featured.city} · {featured.venue}
+                    {featured.day} · {featured.timeStart} – {featured.timeEnd}
                   </p>
                   <p className="mt-6 text-[16px] leading-[1.7] text-stone-200 font-light max-w-[58ch]">
                     {featured.lede}
@@ -132,21 +135,15 @@ const EventsPage = () => {
 
               <div className="relative z-10 mt-auto pt-10 flex items-end gap-8 flex-wrap">
                 <div>
-                  <p className="font-accent text-[11px] font-semibold tracking-[0.18em] uppercase text-stone-400">
-                    Doors
-                  </p>
-                  <p className="font-mono text-[15px] text-white mt-1">{featured.doors}</p>
-                </div>
-                <div>
-                  <p className="font-accent text-[11px] font-semibold tracking-[0.18em] uppercase text-stone-400">
+                  <p className="font-accent text-[12px] font-semibold tracking-[0.18em] uppercase text-stone-200">
                     Program
                   </p>
                   <p className="font-mono text-[15px] text-white mt-1">
                     {featured.timeStart} – {featured.timeEnd}
                   </p>
                 </div>
-                <span className="ml-auto font-accent text-[12px] font-semibold tracking-[0.18em] uppercase text-liberty group-hover:text-white transition-colors">
-                  RSVP & Details →
+                <span className="ml-auto font-accent text-[12px] font-semibold tracking-[0.18em] uppercase text-liberty group-hover:text-white transition-colors duration-700 ease-out">
+                  View Details →
                 </span>
               </div>
             </Link>
@@ -158,7 +155,7 @@ const EventsPage = () => {
                 <Link
                   key={e.slug}
                   href={`/events/${e.slug}`}
-                  className="col-span-12 md:col-span-6 lg:col-span-4 group relative bg-white border border-stone-200 rounded-[4px] p-8 overflow-hidden flex flex-col transition-colors duration-300 hover:bg-navy-900 hover:border-navy-900"
+                  className="col-span-12 md:col-span-6 lg:col-span-4 group relative bg-white border border-stone-200 rounded-[4px] p-8 overflow-hidden flex flex-col transition-colors duration-700 ease-out hover:bg-navy-900 hover:border-navy-900"
                 >
                   <span
                     aria-hidden="true"
@@ -166,32 +163,32 @@ const EventsPage = () => {
                   />
                   <div className="flex items-start justify-between gap-4 mb-6">
                     <div>
-                      <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-patriot mb-1">
+                      <p className="font-mono text-[12px] tracking-[0.18em] uppercase text-patriot mb-1">
                         {month}
                       </p>
-                      <p className="font-display font-black text-[48px] leading-none text-navy-900 tracking-[-0.04em] group-hover:text-white transition-colors">
+                      <p className="font-display font-black text-[48px] leading-none text-navy-900 tracking-[-0.04em] group-hover:text-white transition-colors duration-700 ease-out">
                         {day}
                       </p>
                     </div>
-                    <span className="font-accent text-[11px] font-medium tracking-[0.18em] uppercase text-stone-400 group-hover:text-liberty transition-colors">
+                    <span className="font-accent text-[12px] font-medium tracking-[0.18em] uppercase text-stone-600 group-hover:text-liberty transition-colors duration-700 ease-out">
                       {e.tag}
                     </span>
                   </div>
-                  <h3 className="font-display font-extrabold text-[22px] leading-[1.2] text-navy-900 group-hover:text-white transition-colors">
+                  <h3 className="font-display font-extrabold text-[22px] leading-[1.2] text-navy-900 group-hover:text-white transition-colors duration-700 ease-out">
                     {e.title}
                   </h3>
-                  <p className="mt-2 font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-stone-600 group-hover:text-stone-200 transition-colors">
-                    {e.city} · {e.day}
+                  <p className="mt-2 font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-stone-600 group-hover:text-stone-200 transition-colors duration-700 ease-out">
+                    {e.day}
                   </p>
-                  <p className="mt-4 text-[14px] leading-[1.65] text-ink/70 group-hover:text-stone-200 transition-colors">
+                  <p className="mt-4 text-[14px] leading-[1.65] text-ink/70 group-hover:text-stone-200 transition-colors duration-700 ease-out">
                     {e.lede}
                   </p>
-                  <div className="mt-auto pt-6 flex items-center justify-between gap-4 border-t border-stone-200 group-hover:border-white/10 transition-colors">
-                    <span className="font-mono text-[12px] text-stone-600 group-hover:text-stone-200 transition-colors">
+                  <div className="mt-auto pt-6 flex items-center justify-between gap-4 border-t border-stone-200 group-hover:border-white/10 transition-colors duration-700 ease-out">
+                    <span className="font-mono text-[12px] text-stone-600 group-hover:text-stone-200 transition-colors duration-700 ease-out">
                       {e.timeStart} – {e.timeEnd}
                     </span>
-                    <span className="font-accent text-[11px] font-semibold tracking-[0.18em] uppercase text-patriot group-hover:text-liberty transition-colors">
-                      RSVP →
+                    <span className="font-accent text-[12px] font-semibold tracking-[0.18em] uppercase text-patriot group-hover:text-liberty transition-colors duration-700 ease-out">
+                      Details →
                     </span>
                   </div>
                 </Link>
@@ -201,7 +198,7 @@ const EventsPage = () => {
         </div>
       </section>
 
-      <section className="relative bg-navy-900 text-moonlight py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-navy-900 text-moonlight py-14 lg:py-28 overflow-hidden">
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 items-center">
             <div className="col-span-12 lg:col-span-8">

@@ -5,46 +5,14 @@ import PageHero from '@/components/brand/page-hero'
 import PageShell from '@/components/brand/page-shell'
 
 const ROLES = [
-  {
-    number: '01',
-    title: 'Signs',
-    body: 'Put a Royce White yard sign in your yard, your farm gate, or your storefront. Visible signal to your neighbors that the people are coming.',
-  },
-  {
-    number: '02',
-    title: 'Events',
-    body: 'Help staff rallies, town halls, and the weekly volunteer meeting. Set up, greet attendees, run the sign-in table.',
-  },
-  {
-    number: '03',
-    title: 'Phones',
-    body: 'Call Minnesotans from home. Scripts and dialer provided. Evenings and weekends work best for most volunteers.',
-  },
-  {
-    number: '04',
-    title: 'Donate',
-    body: 'A populist campaign runs on grassroots dollars. Chip in what you can \u2014 no corporate PAC money, ever.',
-  },
-  {
-    number: '05',
-    title: 'Doors',
-    body: 'Knock doors with a team in your precinct. The single most effective campaign action. Turf provided, training provided.',
-  },
-  {
-    number: '06',
-    title: 'Elections',
-    body: 'Work inside the process \u2014 caucuses, conventions, primary day, general day. Become a delegate and help secure the 2026 MNGOP endorsement.',
-  },
-  {
-    number: '07',
-    title: 'Fundraising',
-    body: 'Host a house party, run a meet-and-greet, or drive a personal fundraising page. Every dollar from a real Minnesotan matters.',
-  },
-  {
-    number: '08',
-    title: 'Guard Ballots',
-    body: 'Volunteer as a poll watcher or election integrity observer. Paper ballots, single-day voting, voter ID \u2014 and people who show up to verify it.',
-  },
+  { number: '01', title: 'Signs' },
+  { number: '02', title: 'Events' },
+  { number: '03', title: 'Phones' },
+  { number: '04', title: 'Donate' },
+  { number: '05', title: 'Doors' },
+  { number: '06', title: 'Elections' },
+  { number: '07', title: 'Fundraising' },
+  { number: '08', title: 'Guard Ballots' },
 ]
 
 const VolunteerPage = () => {
@@ -78,7 +46,7 @@ const VolunteerPage = () => {
         </div>
       </PageHero>
 
-      <section id="roles" className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+      <section id="roles" className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
         <div
           aria-hidden="true"
           className="absolute inset-0 brand-grid-overlay-light opacity-60 pointer-events-none"
@@ -111,48 +79,31 @@ const VolunteerPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-12 gap-6">
-            {ROLES.map((role, idx) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+            {ROLES.map((role) => (
               <article
                 key={role.number}
-                className={`col-span-12 md:col-span-6 lg:col-span-3 relative bg-white border border-stone-200 rounded-[4px] p-8 overflow-hidden group transition-colors duration-300 hover:bg-navy-900 hover:border-navy-900 ${
-                  idx === 0 ? 'md:col-span-12 lg:col-span-6' : ''
-                }`}
+                className="relative bg-white border border-stone-200 rounded-[4px] p-5 sm:p-6 lg:p-8 overflow-hidden group transition-colors duration-700 ease-out hover:bg-navy-900 hover:border-navy-900"
               >
                 <span
                   aria-hidden="true"
-                  className="absolute top-0 left-0 w-[3px] h-12 bg-patriot"
+                  className="absolute top-0 left-0 w-[3px] h-10 bg-patriot"
                 />
-                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full border-[1.5px] border-navy-900 transition-colors group-hover:border-liberty mb-6">
-                  <span className="font-accent text-[12px] font-semibold tracking-[0.1em] uppercase text-patriot transition-colors group-hover:text-liberty">
+                <span className="inline-flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full border-[1.5px] border-navy-900 transition-colors duration-700 ease-out group-hover:border-liberty mb-4 sm:mb-5">
+                  <span className="font-accent text-[11px] sm:text-[12px] font-semibold tracking-[0.1em] uppercase text-patriot transition-colors duration-700 ease-out group-hover:text-liberty">
                     /{role.number}
                   </span>
                 </span>
-                <h3
-                  className={`font-display font-extrabold text-navy-900 group-hover:text-white transition-colors ${
-                    idx === 0
-                      ? 'text-[26px] lg:text-[32px] leading-[1.15]'
-                      : 'text-[20px] leading-[1.25]'
-                  }`}
-                >
+                <h3 className="font-display font-extrabold text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-navy-900 group-hover:text-white transition-colors duration-700 ease-out">
                   {role.title}
                 </h3>
-                <p
-                  className={`font-body leading-[1.65] text-ink/80 group-hover:text-stone-200 transition-colors ${
-                    idx === 0
-                      ? 'text-[16px] mt-4 max-w-[52ch]'
-                      : 'text-[14px] mt-3 text-stone-600'
-                  }`}
-                >
-                  {role.body}
-                </p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="relative bg-navy-900 text-moonlight py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-navy-900 text-moonlight py-14 lg:py-32 overflow-hidden">
         <div
           aria-hidden="true"
           className="absolute inset-0 brand-grid-overlay opacity-[0.04] pointer-events-none"
@@ -177,7 +128,7 @@ const VolunteerPage = () => {
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3">
                   <span className="h-[1px] w-8 bg-stone-400" />
-                  <span className="font-accent text-[11px] font-semibold tracking-[0.2em] uppercase text-stone-400">
+                  <span className="font-accent text-[12px] font-semibold tracking-[0.2em] uppercase text-stone-200">
                     Royce White
                   </span>
                 </figcaption>
@@ -193,8 +144,7 @@ const VolunteerPage = () => {
                 <em className="not-italic italic text-liberty">coming.</em>
               </h3>
               <p className="mt-4 text-[16px] leading-[1.8] text-stone-200 font-light">
-                The Royce White campaign runs on Minnesotans &mdash; the ones who knock doors,
-                host house parties, print yard signs, and chip in a dollar when they can.
+                This is a populist movement, so naturally mine is a populist campaign.
               </p>
               <div className="mt-8">
                 <BrandButton variant="ghost-light" href="#signup">
@@ -206,7 +156,7 @@ const VolunteerPage = () => {
         </div>
       </section>
 
-      <section id="signup" className="relative bg-parchment py-24 lg:py-32 overflow-hidden">
+      <section id="signup" className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
         <div className="relative mx-auto max-w-[900px] px-6 lg:px-12">
           <div className="text-center mb-12">
             <p className="brand-section-label text-patriot justify-center inline-flex mb-6">
@@ -234,7 +184,7 @@ const VolunteerPage = () => {
               <div>
                 <label
                   htmlFor="v-first"
-                  className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                  className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                 >
                   First Name
                 </label>
@@ -249,7 +199,7 @@ const VolunteerPage = () => {
               <div>
                 <label
                   htmlFor="v-last"
-                  className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                  className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                 >
                   Last Name
                 </label>
@@ -267,7 +217,7 @@ const VolunteerPage = () => {
               <div>
                 <label
                   htmlFor="v-email"
-                  className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                  className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                 >
                   Email
                 </label>
@@ -282,7 +232,7 @@ const VolunteerPage = () => {
               <div>
                 <label
                   htmlFor="v-zip"
-                  className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                  className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
                 >
                   Zip Code
                 </label>
@@ -299,9 +249,9 @@ const VolunteerPage = () => {
             <div className="mt-4">
               <label
                 htmlFor="v-phone"
-                className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
               >
-                Mobile Phone
+                Mobile Phone <span className="font-normal normal-case tracking-normal text-stone-600">(optional)</span>
               </label>
               <input
                 id="v-phone"
@@ -312,14 +262,14 @@ const VolunteerPage = () => {
             </div>
 
             <fieldset className="mt-6">
-              <legend className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot mb-3">
+              <legend className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot mb-3">
                 Volunteer Opportunities (check all that apply)
               </legend>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {ROLES.map((role) => (
                   <label
                     key={role.number}
-                    className="flex items-start gap-3 cursor-pointer p-3 rounded-[4px] hover:bg-parchment transition-colors"
+                    className="flex items-start gap-3 cursor-pointer p-3 rounded-[4px] hover:bg-parchment transition-colors duration-700 ease-out"
                   >
                     <input
                       type="checkbox"
@@ -338,7 +288,7 @@ const VolunteerPage = () => {
             <div className="mt-6">
               <label
                 htmlFor="v-note"
-                className="font-accent text-[11px] font-semibold tracking-[0.14em] uppercase text-patriot"
+                className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
               >
                 Write a comment
               </label>
@@ -367,7 +317,7 @@ const VolunteerPage = () => {
               <BrandButton variant="primary" type="submit">
                 Count Me In →
               </BrandButton>
-              <span className="font-mono text-[11px] tracking-[0.05em] uppercase text-stone-600">
+              <span className="font-mono text-[12px] tracking-[0.05em] uppercase text-stone-600">
                 The fight continues…
               </span>
             </div>

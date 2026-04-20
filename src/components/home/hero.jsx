@@ -1,5 +1,6 @@
+import Image from 'next/image'
+
 import BrandButton from '@/components/brand/brand-button'
-import PlaceholderImage from '@/components/brand/placeholder-image'
 
 const Hero = () => {
   return (
@@ -54,7 +55,7 @@ const Hero = () => {
               /001 — U.S. Senate · Minnesota · 2026
             </p>
 
-            <p className="font-accent text-[15px] font-bold tracking-[0.18em] uppercase text-patriot mb-6">
+            <p className="font-accent text-[15px] font-bold tracking-[0.18em] uppercase text-liberty mb-6">
               America First
             </p>
 
@@ -88,7 +89,7 @@ const Hero = () => {
 
             <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
               <div>
-                <dt className="font-accent text-[11px] font-medium tracking-[0.14em] uppercase text-stone-400">
+                <dt className="font-accent text-[12px] font-medium tracking-[0.14em] uppercase text-stone-200">
                   Identity
                 </dt>
                 <dd className="font-display font-black italic text-[24px] leading-[1.1] text-white mt-2">
@@ -96,7 +97,7 @@ const Hero = () => {
                 </dd>
               </div>
               <div>
-                <dt className="font-accent text-[11px] font-medium tracking-[0.14em] uppercase text-stone-400">
+                <dt className="font-accent text-[12px] font-medium tracking-[0.14em] uppercase text-stone-200">
                   Mission
                 </dt>
                 <dd className="font-display font-black italic text-[24px] leading-[1.1] text-white mt-2">
@@ -104,7 +105,7 @@ const Hero = () => {
                 </dd>
               </div>
               <div>
-                <dt className="font-accent text-[11px] font-medium tracking-[0.14em] uppercase text-stone-400">
+                <dt className="font-accent text-[12px] font-medium tracking-[0.14em] uppercase text-stone-200">
                   Values
                 </dt>
                 <dd className="font-display font-black italic text-[24px] leading-[1.1] text-white mt-2">
@@ -116,15 +117,13 @@ const Hero = () => {
 
           <div className="hidden lg:block col-span-4 xl:col-span-5 relative pt-6">
             <div className="relative aspect-[4/5] rounded-[4px] overflow-hidden border border-white/10 brand-duotone">
-              <PlaceholderImage
-                width={640}
-                height={800}
-                label="Royce White"
-                bg="0A1628"
-                fg="EDEBE3"
-                alt="Portrait placeholder — replace with Royce White campaign photo"
+              <Image
+                src="/royce-white-portrait.jpg"
+                alt="Royce White speaking at a rally at the Minnesota State Capitol"
+                fill
                 priority
                 sizes="(min-width: 1280px) 560px, (min-width: 1024px) 400px, 100vw"
+                className="object-cover"
               />
               <span
                 aria-hidden="true"
@@ -135,8 +134,8 @@ const Hero = () => {
                 className="absolute bottom-5 right-5 w-[44px] h-[44px] border-b-2 border-r-2 border-liberty z-10"
               />
               <div className="absolute bottom-6 left-6 right-16 z-10">
-                <p className="font-accent text-[10px] font-medium tracking-[0.22em] uppercase text-stone-200">
-                  Portrait · MN 2026
+                <p className="font-accent text-[12px] font-medium tracking-[0.22em] uppercase text-stone-200">
+                  MN · 2026
                 </p>
                 <p className="font-display italic font-bold text-[22px] leading-[1.1] text-white mt-1">
                   The People's <span className="text-liberty">Candidate.</span>

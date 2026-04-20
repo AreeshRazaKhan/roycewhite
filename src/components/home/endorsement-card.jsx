@@ -58,7 +58,7 @@ const EndorsementCard = ({
           className={cn(
             'font-accent font-semibold tracking-[0.18em] uppercase',
             isDark ? 'text-liberty' : 'text-patriot',
-            featured ? 'text-[12px] mb-6' : 'text-[10px] mb-4',
+            featured ? 'text-[12px] mb-6' : 'text-[12px] mb-4',
           )}
         >
           Endorsement
@@ -93,8 +93,8 @@ const EndorsementCard = ({
             <p
               className={cn(
                 'font-accent font-medium tracking-[0.18em] uppercase mt-2',
-                isDark ? 'text-stone-400' : 'text-stone-600',
-                'text-[10px]',
+                isDark ? 'text-stone-200' : 'text-stone-600',
+                'text-[12px]',
               )}
             >
               {role}
