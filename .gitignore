@@ -24,8 +24,8 @@
 .DS_Store
 *.pem
 
-# audit artifacts (regenerable via scripts/, bulky, not for /public)
-/public/audit/
+# claude code skill installs (local tooling, contains node_modules)
+/.claude/skills/
 
 # debug
 npm-debug.log*

@@ -38,7 +38,9 @@
       "Bash(mkdir -p .claude/skills)",
       "Bash(cp -r /tmp/playwright-skill-temp/skills/playwright-skill .claude/skills/)",
       "Bash(cygpath -w /tmp)",
-      "Bash(git stash *)"
+      "Bash(git stash *)",
+      "Bash(git mv *)",
+      "Bash(git rm *)"
     ],
     "deny": []
   }
