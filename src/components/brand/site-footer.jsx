@@ -6,6 +6,7 @@ const EXPLORE_LINKS = [
   { href: '/about', label: 'About' },
   { href: '/events', label: 'Events' },
   { href: '/ask-royce', label: 'Ask Royce' },
+  { href: '/faqs', label: 'FAQs' },
 ]
 
 const ACTION_LINKS = [

@@ -14,6 +14,7 @@ const PRIMARY_LINKS = [
   { href: '/events', label: 'Events' },
   { href: '/volunteer', label: 'Volunteer' },
   { href: '/ask-royce', label: 'Ask Royce' },
+  { href: '/faqs', label: 'FAQs' },
   { href: '/contact', label: 'Contact' },
 ]
 

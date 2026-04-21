@@ -3,11 +3,13 @@ import SiteHeader from '@/components/brand/site-header'
 import AboutSection from '@/components/home/about-section'
 import CtaSection from '@/components/home/cta-section'
 import EndorsementsSection from '@/components/home/endorsements-section'
+import FeaturedVideoSection from '@/components/home/featured-video-section'
 import FightCallout from '@/components/home/fight-callout'
 import Hero from '@/components/home/hero'
 import IssuesSection from '@/components/home/issues-section'
 import JoinFormSection from '@/components/home/join-form-section'
 import MarqueeBand from '@/components/home/marquee-band'
+import SmashMouthSection from '@/components/home/smash-mouth-section'
 import StatsSection from '@/components/home/stats-section'
 
 const Home = () => {
@@ -24,6 +26,8 @@ const Home = () => {
         <Hero />
         <MarqueeBand />
         <AboutSection />
+        <FeaturedVideoSection />
+        <SmashMouthSection />
         <IssuesSection />
         <FightCallout />
         <StatsSection />
