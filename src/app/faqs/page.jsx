@@ -45,8 +45,8 @@ const FaqsPage = () => {
   return (
     <PageShell>
       <PageHero
-        eyebrow="/041 — Frequently Asked"
-        number="041"
+        eyebrow="/faqs — Frequently Asked"
+        number="001"
         title={
           <>
             The most{' '}
@@ -79,13 +79,13 @@ const FaqsPage = () => {
           className="brand-section-number hidden lg:block text-patriot/[0.06]"
           style={{ top: '60px', left: '40px', fontSize: '200px' }}
         >
-          041
+          002
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-16">
             <div className="col-span-12 lg:col-span-4">
-              <p className="brand-section-label text-gold">/041 — Frequently Asked</p>
+              <p className="brand-section-label text-gold">/002 — Frequently Asked</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <p className="text-[17px] leading-[1.8] text-stone-200 font-light max-w-2xl">

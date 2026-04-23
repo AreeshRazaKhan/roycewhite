@@ -46,7 +46,7 @@ const ContactPage = () => {
     <PageShell>
       <PageHero
         eyebrow="/contact — Get In Touch"
-        number="020"
+        number="001"
         title={
           <>
             Tell Us How You Can{' '}
@@ -66,13 +66,13 @@ const ContactPage = () => {
           aria-hidden="true"
           className="brand-section-number hidden lg:block text-patriot/[0.05] top-10 right-10 text-[200px]"
         >
-          021
+          002
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
             <div className="col-span-12 lg:col-span-5">
-              <p className="brand-section-label text-patriot mb-8">/021 — Direct Lines</p>
+              <p className="brand-section-label text-patriot mb-8">/002 — Direct Lines</p>
 
               <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900 text-[clamp(2.25rem,3.5vw,3rem)]">
                 We want to connect with you for the{' '}

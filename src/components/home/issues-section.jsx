@@ -49,14 +49,14 @@ const IssuesSection = () => {
         className="brand-section-number hidden lg:block text-patriot/[0.06]"
         style={{ top: '60px', right: '40px', fontSize: '200px' }}
       >
-        003
+        005
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 lg:col-span-4">
             <p className="brand-section-label text-patriot">
-              /003 — Royce on the Issues
+              /005 — Royce on the Issues
             </p>
           </div>
           <div className="col-span-12 lg:col-span-8">

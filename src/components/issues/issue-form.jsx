@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 
 import BrandButton from '@/components/brand/brand-button'
@@ -206,6 +207,24 @@ const IssueForm = () => {
           The fight continues…
         </span>
       </div>
+
+      <p className="mt-6 font-body text-[13px] leading-[1.6] text-stone-600">
+        By submitting you agree to the{' '}
+        <Link
+          href="/terms-conditions"
+          className="text-patriot underline underline-offset-2 hover:text-patriot-dark"
+        >
+          Terms of Service
+        </Link>{' '}
+        and{' '}
+        <Link
+          href="/privacy-policy"
+          className="text-patriot underline underline-offset-2 hover:text-patriot-dark"
+        >
+          Privacy Policy
+        </Link>
+        .
+      </p>
     </form>
   )
 }

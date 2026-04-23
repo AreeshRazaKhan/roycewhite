@@ -32,13 +32,13 @@ const SmashMouthSection = () => {
         className="brand-section-number hidden lg:block text-patriot/[0.05]"
         style={{ top: '60px', right: '40px', fontSize: '220px' }}
       >
-        SMP
+        004
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="mb-10 lg:mb-14 text-center">
-          <p className="font-accent text-[12px] font-semibold tracking-[0.2em] uppercase text-patriot mb-5">
-            Posted on Facebook
+          <p className="brand-section-label text-patriot justify-center inline-flex mb-5">
+            /004 — Posted on Facebook
           </p>
           <h2
             className="font-display font-black leading-[1.0] tracking-[-0.02em] text-navy-900"

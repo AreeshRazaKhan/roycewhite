@@ -15,14 +15,14 @@ const JoinFormSection = () => {
         className="brand-section-number hidden lg:block text-patriot/[0.05]"
         style={{ top: '40px', right: '40px', fontSize: '200px' }}
       >
-        007
+        009
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
           <div className="col-span-12 lg:col-span-6">
             <p className="brand-section-label text-patriot mb-8">
-              /007 — Caucus Counterattack
+              /009 — Caucus Counterattack
             </p>
 
             <h2

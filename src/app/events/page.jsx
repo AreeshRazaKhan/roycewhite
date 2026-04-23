@@ -24,7 +24,7 @@ const EventsPage = () => {
     <PageShell>
       <PageHero
         eyebrow="/events — Get Involved"
-        number="050"
+        number="001"
         title={
           <>
             Join the{' '}
@@ -53,13 +53,13 @@ const EventsPage = () => {
           className="brand-section-number hidden lg:block text-patriot/[0.05]"
           style={{ top: '60px', right: '40px', fontSize: '200px' }}
         >
-          051
+          002
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-16">
             <div className="col-span-12 lg:col-span-4">
-              <p className="brand-section-label text-patriot">/051 — Latest past events</p>
+              <p className="brand-section-label text-patriot">/002 — Latest past events</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <h2
@@ -199,10 +199,17 @@ const EventsPage = () => {
       </section>
 
       <section className="relative bg-navy-900 text-moonlight py-14 lg:py-28 overflow-hidden">
+        <span
+          aria-hidden="true"
+          className="brand-section-number hidden lg:block text-patriot/[0.06]"
+          style={{ top: '40px', right: '40px', fontSize: '200px' }}
+        >
+          003
+        </span>
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 items-center">
             <div className="col-span-12 lg:col-span-8">
-              <p className="brand-section-label text-gold mb-4">/052 — Get In Touch</p>
+              <p className="brand-section-label text-gold mb-4">/003 — Get In Touch</p>
               <h2
                 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-white"
                 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.75rem)' }}

@@ -21,6 +21,11 @@ const SOCIAL_LINKS = [
   { href: 'https://tiktok.com/', label: 'TikTok' },
 ]
 
+const LEGAL_LINKS = [
+  { href: '/terms-conditions', label: 'Terms & Conditions' },
+  { href: '/privacy-policy', label: 'Privacy Policy' },
+]
+
 const SiteFooter = () => {
   const year = new Date().getFullYear()
   return (
@@ -104,6 +109,24 @@ const SiteFooter = () => {
                   >
                     {l.label}
                   </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="col-span-6 md:col-span-4 lg:col-span-2">
+            <p className="font-accent text-[12px] font-semibold tracking-[0.2em] uppercase text-moonlight mb-5">
+              Legal
+            </p>
+            <ul className="text-[14px]">
+              {LEGAL_LINKS.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="inline-flex items-center min-h-11 min-w-11 hover:text-liberty transition-colors duration-500 ease-out"
+                  >
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>

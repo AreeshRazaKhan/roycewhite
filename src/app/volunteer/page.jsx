@@ -25,7 +25,7 @@ const VolunteerPage = () => {
     <PageShell>
       <PageHero
         eyebrow="/volunteer — All Hands On Deck"
-        number="030"
+        number="001"
         title={
           <>
             Tell us how you can{' '}
@@ -60,13 +60,13 @@ const VolunteerPage = () => {
           aria-hidden="true"
           className="brand-section-number hidden lg:block text-patriot/[0.05] top-[60px] right-10 text-[200px]"
         >
-          031
+          002
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-16">
             <div className="col-span-12 lg:col-span-4">
-              <p className="brand-section-label text-patriot">/031 — Volunteer Opportunities</p>
+              <p className="brand-section-label text-patriot">/002 — Volunteer Opportunities</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900 text-[clamp(2.25rem,3.75vw,3.5rem)]">
@@ -109,11 +109,17 @@ const VolunteerPage = () => {
           aria-hidden="true"
           className="absolute inset-0 brand-grid-overlay opacity-[0.04] pointer-events-none"
         />
+        <span
+          aria-hidden="true"
+          className="brand-section-number hidden lg:block text-patriot/[0.06] top-[60px] left-10 text-[200px]"
+        >
+          003
+        </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 lg:gap-12 items-center">
             <div className="col-span-12 lg:col-span-7">
-              <p className="brand-section-label text-gold mb-6">/032 — Caucus Counterattack</p>
+              <p className="brand-section-label text-gold mb-6">/003 — Caucus Counterattack</p>
 
               <figure className="relative bg-navy-800 border-l-4 border-patriot rounded-[4px] p-8 lg:p-10 max-w-2xl">
                 <span
@@ -155,10 +161,16 @@ const VolunteerPage = () => {
       </section>
 
       <section id="signup" className="relative bg-parchment py-14 lg:py-32 overflow-hidden">
+        <span
+          aria-hidden="true"
+          className="brand-section-number hidden lg:block text-navy-900/[0.04] top-10 left-1/2 -translate-x-1/2 text-[220px]"
+        >
+          004
+        </span>
         <div className="relative mx-auto max-w-[900px] px-6 lg:px-12">
           <div className="text-center mb-12">
             <p className="brand-section-label text-patriot justify-center inline-flex mb-6">
-              /033 — Sign Up
+              /004 — Sign Up
             </p>
             <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900 text-[clamp(2rem,3.25vw,3rem)]">
               Tell us what you&rsquo;re{' '}

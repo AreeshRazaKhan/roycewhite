@@ -35,14 +35,14 @@ const StatsSection = () => {
         className="brand-section-number hidden lg:block text-white/[0.04]"
         style={{ top: '50px', right: '50px', fontSize: '220px' }}
       >
-        006
+        007
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 lg:col-span-4">
             <p className="brand-section-label text-gold">
-              /006 — Border · Debt · Forever Wars
+              /007 — Border · Debt · Forever Wars
             </p>
           </div>
           <div className="col-span-12 lg:col-span-8">

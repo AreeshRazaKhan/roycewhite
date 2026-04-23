@@ -30,14 +30,14 @@ const CtaSection = () => {
         className="brand-section-number hidden lg:block text-patriot/[0.06]"
         style={{ top: '40px', right: '50%', transform: 'translateX(50%)', fontSize: '260px' }}
       >
-        008
+        010
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12 text-center">
         <div className="brand-rule-gradient mx-auto mb-10" />
 
         <p className="brand-section-label text-gold justify-center mb-8">
-          /008 — Stand With Royce
+          /010 — Stand With Royce
         </p>
 
         <h2

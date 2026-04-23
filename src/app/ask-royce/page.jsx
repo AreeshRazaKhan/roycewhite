@@ -94,7 +94,7 @@ const AskRoycePage = () => {
     <PageShell>
       <PageHero
         eyebrow="/ask-royce — Straight Answers"
-        number="040"
+        number="001"
         title={
           <>
             Ask Royce{' '}
@@ -125,13 +125,13 @@ const AskRoycePage = () => {
           aria-hidden="true"
           className="brand-section-number hidden lg:block text-patriot/[0.06] top-[60px] left-10 text-[200px]"
         >
-          041
+          002
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-14">
             <div className="col-span-12 lg:col-span-4">
-              <p className="brand-section-label text-gold">/041 — American Values</p>
+              <p className="brand-section-label text-gold">/002 — American Values</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-white text-[clamp(2.25rem,3.75vw,3.5rem)]">
@@ -193,13 +193,13 @@ const AskRoycePage = () => {
           aria-hidden="true"
           className="brand-section-number hidden lg:block text-patriot/[0.05] top-[60px] right-10 text-[200px]"
         >
-          042
+          003
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-12">
             <div className="col-span-12 lg:col-span-4">
-              <p className="brand-section-label text-patriot">/042 — Issues We Are Fighting For</p>
+              <p className="brand-section-label text-patriot">/003 — Issues We Are Fighting For</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900 text-[clamp(2.25rem,3.75vw,3.5rem)]">
@@ -241,13 +241,13 @@ const AskRoycePage = () => {
           aria-hidden="true"
           className="brand-section-number hidden lg:block text-patriot/[0.05] top-[60px] right-10 text-[200px]"
         >
-          043
+          004
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
             <div className="col-span-12 lg:col-span-5">
-              <p className="brand-section-label text-patriot mb-8">/043 — Submit a Question</p>
+              <p className="brand-section-label text-patriot mb-8">/004 — Submit a Question</p>
 
               <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900 text-[clamp(2rem,3.5vw,3rem)]">
                 Feel free to reach out for further{' '}

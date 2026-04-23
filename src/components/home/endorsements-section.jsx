@@ -8,14 +8,14 @@ const EndorsementsSection = () => {
         className="brand-section-number hidden lg:block text-navy-900/[0.04]"
         style={{ top: '50px', left: '50px', fontSize: '200px' }}
       >
-        005
+        008
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 lg:col-span-5">
             <p className="brand-section-label text-patriot">
-              /005 — Endorsements
+              /008 — Endorsements
             </p>
             <h2
               className="mt-6 font-display font-black leading-[1.05] tracking-[-0.02em] text-navy-900"

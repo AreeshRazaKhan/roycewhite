@@ -64,7 +64,7 @@ const AboutPage = () => {
     <PageShell>
       <PageHero
         eyebrow="/about — A Life of Determination"
-        number="010"
+        number="001"
         title={
           <>
             An American man fighting for{' '}
@@ -89,7 +89,7 @@ const AboutPage = () => {
           className="brand-section-number hidden lg:block text-navy-900/[0.04]"
           style={{ top: '60px', right: '40px', fontSize: '200px' }}
         >
-          011
+          002
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
@@ -123,7 +123,7 @@ const AboutPage = () => {
             </div>
 
             <div className="col-span-12 lg:col-span-7 lg:pl-4 lg:pt-2">
-              <p className="brand-section-label text-patriot mb-8">/011 — The Story Behind The Success</p>
+              <p className="brand-section-label text-patriot mb-8">/002 — The Story Behind The Success</p>
 
               <h2
                 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900"
@@ -179,13 +179,13 @@ const AboutPage = () => {
           className="brand-section-number hidden lg:block text-patriot/[0.06]"
           style={{ top: '60px', left: '40px', fontSize: '200px' }}
         >
-          012
+          003
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-16">
             <div className="col-span-12 lg:col-span-4">
-              <p className="brand-section-label text-gold">/012 — First Principles</p>
+              <p className="brand-section-label text-gold">/003 — First Principles</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <h2
@@ -234,11 +234,18 @@ const AboutPage = () => {
           aria-hidden="true"
           className="absolute inset-0 brand-grid-overlay-light opacity-60 pointer-events-none"
         />
+        <span
+          aria-hidden="true"
+          className="brand-section-number hidden lg:block text-navy-900/[0.04]"
+          style={{ top: '60px', right: '40px', fontSize: '200px' }}
+        >
+          004
+        </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid grid-cols-12 gap-6 mb-16">
             <div className="col-span-12 lg:col-span-4">
-              <p className="brand-section-label text-patriot">/013 — A Life of Achievement</p>
+              <p className="brand-section-label text-patriot">/004 — A Life of Achievement</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <h2
@@ -277,9 +284,16 @@ const AboutPage = () => {
       </section>
 
       <section className="relative bg-navy-900 text-moonlight py-14 lg:py-28 overflow-hidden">
+        <span
+          aria-hidden="true"
+          className="brand-section-number hidden lg:block text-patriot/[0.06]"
+          style={{ top: '40px', left: '50%', transform: 'translateX(-50%)', fontSize: '220px' }}
+        >
+          005
+        </span>
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12 text-center">
           <p className="brand-section-label text-gold justify-center mb-6 inline-flex">
-            /014 — The Fight Continues…
+            /005 — The Fight Continues…
           </p>
           <h2
             className="font-display font-black leading-[1.05] tracking-[-0.02em] text-white mx-auto max-w-4xl"

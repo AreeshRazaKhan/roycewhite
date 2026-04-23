@@ -60,7 +60,7 @@ const EventDetailPage = async ({ params }) => {
           className="brand-section-number hidden lg:block text-patriot/[0.06]"
           style={{ top: '90px', right: '80px', fontSize: '220px' }}
         >
-          /{event.number}
+          001
         </span>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12 pt-20 pb-28 lg:pt-32 lg:pb-40">

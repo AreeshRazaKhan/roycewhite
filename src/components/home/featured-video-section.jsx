@@ -23,14 +23,14 @@ const FeaturedVideoSection = () => {
         className="brand-section-number hidden lg:block text-patriot/[0.06]"
         style={{ top: '60px', left: '40px', fontSize: '200px' }}
       >
-        PBS
+        003
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid grid-cols-12 gap-6 mb-10 lg:mb-14">
           <div className="col-span-12 lg:col-span-4">
-            <p className="font-accent text-[13px] font-semibold tracking-[0.2em] uppercase text-liberty brand-section-label">
-              — {VIDEO.eyebrow}
+            <p className="brand-section-label text-liberty">
+              /003 — {VIDEO.eyebrow}
             </p>
           </div>
           <div className="col-span-12 lg:col-span-8">

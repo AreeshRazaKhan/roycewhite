@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 
@@ -182,16 +183,6 @@ const EventRsvpForm = ({ event }) => {
       </div>
 
       <fieldset className="mt-8 space-y-4">
-        <legend className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot mb-2">
-          SMS Communications
-        </legend>
-
-        {!hasPhone && (
-          <p className="font-body text-[13px] italic text-stone-600">
-            Enter a phone number above to opt in to SMS messages.
-          </p>
-        )}
-
         <label
           className={cn(
             'flex items-start gap-3',
@@ -260,6 +251,24 @@ const EventRsvpForm = ({ event }) => {
           The fight continues…
         </span>
       </div>
+
+      <p className="mt-6 font-body text-[13px] leading-[1.6] text-stone-600">
+        By submitting you agree to the{' '}
+        <Link
+          href="/terms-conditions"
+          className="text-patriot underline underline-offset-2 hover:text-patriot-dark"
+        >
+          Terms of Service
+        </Link>{' '}
+        and{' '}
+        <Link
+          href="/privacy-policy"
+          className="text-patriot underline underline-offset-2 hover:text-patriot-dark"
+        >
+          Privacy Policy
+        </Link>
+        .
+      </p>
     </form>
   )
 }

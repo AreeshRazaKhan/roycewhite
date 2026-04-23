@@ -19,14 +19,14 @@ const FightCallout = () => {
         className="brand-section-number hidden lg:block text-patriot/[0.06]"
         style={{ top: '40px', right: '60px', fontSize: '240px' }}
       >
-        004
+        006
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid grid-cols-12 gap-6 items-end">
           <div className="col-span-12 lg:col-span-7">
             <p className="brand-section-label text-liberty mb-8">
-              /004 — The Fight
+              /006 — The Fight
             </p>
 
             <h2
