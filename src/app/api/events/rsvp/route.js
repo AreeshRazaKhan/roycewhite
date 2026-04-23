@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server'
 
-import { GHL_WEBHOOKS } from '@/constants/ghl'
+import { GHL_COMPLIANCE_WEBHOOK, GHL_WEBHOOKS } from '@/constants/ghl'
+import { normalizePhoneForSubmit } from '@/lib/phone'
+
+const WEBHOOK_URLS = [GHL_WEBHOOKS.eventRsvp, GHL_COMPLIANCE_WEBHOOK]
+
+const yesNo = (value) => (value ? 'Yes' : 'No')
 
 export async function POST(request) {
   try {
@@ -19,23 +24,35 @@ export async function POST(request) {
       firstName,
       lastName,
       email,
-      phone: (body.phone || '').trim(),
+      phone: normalizePhoneForSubmit(body.phone),
       eventName: (body.eventName || '').trim(),
       eventDate: (body.eventDate || '').trim(),
       eventTime: (body.eventTime || '').trim(),
       eventCategory: (body.eventCategory || '').trim(),
+      sms_updates: yesNo(body.smsUpdates),
+      sms_promo: yesNo(body.smsPromo),
       source: 'src_event',
       submitted_at: new Date().toISOString(),
     }
 
-    const response = await fetch(GHL_WEBHOOKS.eventRsvp, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    })
+    const results = await Promise.all(
+      WEBHOOK_URLS.map((url) =>
+        fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }).catch((error) => {
+          console.error('[api/events/rsvp] webhook fetch failed:', error)
+          return { ok: false }
+        })
+      )
+    )
 
-    if (!response.ok) {
-      console.error('[api/events/rsvp]: GHL webhook returned', response.status)
+    if (!results.some((r) => r.ok)) {
+      console.error(
+        '[api/events/rsvp]: every webhook failed',
+        results.map((r) => r.status)
+      )
       return NextResponse.json({ error: 'Upstream webhook failed' }, { status: 502 })
     }
 

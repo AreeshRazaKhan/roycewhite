@@ -5,6 +5,8 @@ import { useState } from 'react'
 import BrandButton from '@/components/brand/brand-button'
 import FormField from '@/components/ui/form-field'
 import { SMS_CONSENT_PROMO, SMS_CONSENT_UPDATES } from '@/constants/issues'
+import { cn } from '@/lib/utils'
+import { formatPhoneInput } from '@/lib/phone'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -25,11 +27,26 @@ const ContactForm = () => {
   const [success, setSuccess] = useState(false)
   const [serverError, setServerError] = useState('')
 
+  const hasPhone = values.phone.trim().length > 0
+
   const handleChange = (field) => (event) => {
     const next = event.target.type === 'checkbox' ? event.target.checked : event.target.value
     setValues((prev) => ({ ...prev, [field]: next }))
     if (errors[field]) {
       setErrors((prev) => ({ ...prev, [field]: '' }))
+    }
+  }
+
+  const handlePhoneChange = (event) => {
+    const formatted = formatPhoneInput(event.target.value)
+    setValues((prev) => {
+      if (formatted === '') {
+        return { ...prev, phone: '', smsUpdates: false, smsPromo: false }
+      }
+      return { ...prev, phone: formatted }
+    })
+    if (errors.phone) {
+      setErrors((prev) => ({ ...prev, phone: '' }))
     }
   }
 
@@ -152,8 +169,9 @@ const ContactForm = () => {
           autoComplete="tel"
           inputMode="tel"
           optional
+          placeholder="+1 (xxx) xxx-xxxx"
           value={values.phone}
-          onChange={handleChange('phone')}
+          onChange={handlePhoneChange}
           error={errors.phone}
         />
       </div>
@@ -177,28 +195,58 @@ const ContactForm = () => {
           SMS Communications
         </legend>
 
-        <label className="flex items-start gap-3 cursor-pointer">
+        {!hasPhone && (
+          <p className="font-body text-[13px] italic text-stone-600">
+            Enter a phone number above to opt in to SMS messages.
+          </p>
+        )}
+
+        <label
+          className={cn(
+            'flex items-start gap-3',
+            hasPhone ? 'cursor-pointer' : 'cursor-not-allowed'
+          )}
+        >
           <input
             type="checkbox"
             name="smsUpdates"
             checked={values.smsUpdates}
             onChange={handleChange('smsUpdates')}
-            className="mt-1 h-4 w-4 accent-patriot shrink-0"
+            disabled={!hasPhone}
+            required={hasPhone}
+            className="mt-1 h-4 w-4 accent-patriot shrink-0 disabled:opacity-40 disabled:cursor-not-allowed"
           />
-          <span className="text-[13px] leading-[1.6] text-ink/80 font-light">
+          <span
+            className={cn(
+              'text-[13px] leading-[1.6] font-light',
+              hasPhone ? 'text-ink/80' : 'text-ink/40'
+            )}
+          >
             {SMS_CONSENT_UPDATES}
           </span>
         </label>
 
-        <label className="flex items-start gap-3 cursor-pointer">
+        <label
+          className={cn(
+            'flex items-start gap-3',
+            hasPhone ? 'cursor-pointer' : 'cursor-not-allowed'
+          )}
+        >
           <input
             type="checkbox"
             name="smsPromo"
             checked={values.smsPromo}
             onChange={handleChange('smsPromo')}
-            className="mt-1 h-4 w-4 accent-patriot shrink-0"
+            disabled={!hasPhone}
+            required={hasPhone}
+            className="mt-1 h-4 w-4 accent-patriot shrink-0 disabled:opacity-40 disabled:cursor-not-allowed"
           />
-          <span className="text-[13px] leading-[1.6] text-ink/80 font-light">
+          <span
+            className={cn(
+              'text-[13px] leading-[1.6] font-light',
+              hasPhone ? 'text-ink/80' : 'text-ink/40'
+            )}
+          >
             {SMS_CONSENT_PROMO}
           </span>
         </label>

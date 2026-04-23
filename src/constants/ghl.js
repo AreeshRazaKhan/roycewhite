@@ -11,3 +11,11 @@ export const GHL_WEBHOOKS = {
   issue: `${HOOK_BASE}/3c2d23be-00aa-49d5-9d14-6597d2e93123`,
   eventRsvp: `${HOOK_BASE}/b8b53720-18c4-4cde-9db9-c549de6264ee`,
 }
+
+// Compliance webhook — single shared URL fired alongside the primary webhook
+// for any form that collects a phone number. See
+// .claude/rules/forms-compliance-pattern.md §1.
+//
+// TODO: replace placeholder with the real Royce White compliance workflow
+// trigger URL once provisioned in GoHighLevel.
+export const GHL_COMPLIANCE_WEBHOOK = `${HOOK_BASE}/00000000-0000-0000-0000-000000000000`

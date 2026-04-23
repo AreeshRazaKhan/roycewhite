@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server'
 
-import { GHL_WEBHOOKS } from '@/constants/ghl'
+import { GHL_COMPLIANCE_WEBHOOK, GHL_WEBHOOKS } from '@/constants/ghl'
+import { normalizePhoneForSubmit } from '@/lib/phone'
+
+const WEBHOOK_URLS = [...GHL_WEBHOOKS.volunteer, GHL_COMPLIANCE_WEBHOOK]
 
 const yesNo = (value) => (value ? 'Yes' : 'No')
 
@@ -25,7 +28,7 @@ export async function POST(request) {
       firstName,
       lastName,
       email,
-      phone: (body.phone || '').trim(),
+      phone: normalizePhoneForSubmit(body.phone),
       zipCode: (body.zipCode || '').trim(),
       county: (body.county || '').trim(),
       region: (body.region || '').trim(),
@@ -42,7 +45,7 @@ export async function POST(request) {
     }
 
     const results = await Promise.all(
-      GHL_WEBHOOKS.volunteer.map((url) =>
+      WEBHOOK_URLS.map((url) =>
         fetch(url, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -54,10 +57,9 @@ export async function POST(request) {
       )
     )
 
-    const anySuccess = results.some((r) => r.ok)
-    if (!anySuccess) {
+    if (!results.some((r) => r.ok)) {
       console.error(
-        '[api/volunteer]: all GHL webhooks failed',
+        '[api/volunteer]: every webhook failed',
         results.map((r) => r.status)
       )
       return NextResponse.json({ error: 'Upstream webhook failed' }, { status: 502 })
