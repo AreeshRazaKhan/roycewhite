@@ -160,6 +160,7 @@ const VolunteerSignup = () => {
           name="firstName"
           label="First Name"
           autoComplete="given-name"
+          placeholder="First Name"
           required
           value={values.firstName}
           onChange={handleChange('firstName')}
@@ -170,6 +171,7 @@ const VolunteerSignup = () => {
           name="lastName"
           label="Last Name"
           autoComplete="family-name"
+          placeholder="Last Name"
           required
           value={values.lastName}
           onChange={handleChange('lastName')}
@@ -184,6 +186,7 @@ const VolunteerSignup = () => {
           label="Email"
           type="email"
           autoComplete="email"
+          placeholder="you@example.com"
           required
           value={values.email}
           onChange={handleChange('email')}
@@ -210,6 +213,7 @@ const VolunteerSignup = () => {
           label="ZIP Code"
           autoComplete="postal-code"
           inputMode="numeric"
+          placeholder="55343"
           optional
           value={values.zipCode}
           onChange={handleChange('zipCode')}
@@ -323,6 +327,7 @@ const VolunteerSignup = () => {
           label="What Issue(s) Matter Most?"
           as="textarea"
           rows={3}
+          placeholder="Public safety, the economy, election integrity, mental health…"
           required
           value={values.issues}
           onChange={handleChange('issues')}
@@ -337,6 +342,7 @@ const VolunteerSignup = () => {
           label="Anything Else to Share?"
           as="textarea"
           rows={3}
+          placeholder="Skills, availability windows, anything we should know…"
           optional
           value={values.anythingElse}
           onChange={handleChange('anythingElse')}

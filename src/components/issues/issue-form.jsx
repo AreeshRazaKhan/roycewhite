@@ -116,6 +116,7 @@ const IssueForm = () => {
           name="name"
           label="Full Name"
           autoComplete="name"
+          placeholder="Full Name"
           required
           value={values.name}
           onChange={handleChange('name')}
@@ -127,6 +128,7 @@ const IssueForm = () => {
           label="Email"
           type="email"
           autoComplete="email"
+          placeholder="you@example.com"
           required
           value={values.email}
           onChange={handleChange('email')}
@@ -152,8 +154,8 @@ const IssueForm = () => {
           name="location"
           label="Location"
           autoComplete="address-level2"
+          placeholder="Street address, neighborhood, or city"
           optional
-          hint="Street address, neighborhood, or city"
           value={values.location}
           onChange={handleChange('location')}
         />
@@ -164,6 +166,7 @@ const IssueForm = () => {
           id="issue-subject"
           name="subject"
           label="Subject"
+          placeholder="A short headline for your question"
           required
           value={values.subject}
           onChange={handleChange('subject')}
@@ -178,6 +181,7 @@ const IssueForm = () => {
           label="Description"
           as="textarea"
           rows={6}
+          placeholder="Ask Royce in your own words. The more context, the better the answer…"
           required
           value={values.description}
           onChange={handleChange('description')}

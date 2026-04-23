@@ -135,6 +135,7 @@ const EventRsvpForm = ({ event }) => {
           name="firstName"
           label="First Name"
           autoComplete="given-name"
+          placeholder="First Name"
           required
           value={values.firstName}
           onChange={handleChange('firstName')}
@@ -145,6 +146,7 @@ const EventRsvpForm = ({ event }) => {
           name="lastName"
           label="Last Name"
           autoComplete="family-name"
+          placeholder="Last Name"
           required
           value={values.lastName}
           onChange={handleChange('lastName')}
@@ -159,6 +161,7 @@ const EventRsvpForm = ({ event }) => {
           label="Email"
           type="email"
           autoComplete="email"
+          placeholder="you@example.com"
           required
           value={values.email}
           onChange={handleChange('email')}

@@ -132,6 +132,7 @@ const ContactForm = () => {
           name="firstName"
           label="First Name"
           autoComplete="given-name"
+          placeholder="First Name"
           required
           value={values.firstName}
           onChange={handleChange('firstName')}
@@ -142,6 +143,7 @@ const ContactForm = () => {
           name="lastName"
           label="Last Name"
           autoComplete="family-name"
+          placeholder="Last Name"
           required
           value={values.lastName}
           onChange={handleChange('lastName')}
@@ -156,6 +158,7 @@ const ContactForm = () => {
           label="Email"
           type="email"
           autoComplete="email"
+          placeholder="you@example.com"
           required
           value={values.email}
           onChange={handleChange('email')}
@@ -183,6 +186,7 @@ const ContactForm = () => {
           label="Your Message"
           as="textarea"
           rows={5}
+          placeholder="Tell us how you'd like to participate, what you're hearing on the ground, or what you'd like Royce to address…"
           required
           value={values.message}
           onChange={handleChange('message')}
