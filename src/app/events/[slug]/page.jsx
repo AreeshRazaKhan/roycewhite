@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 
 import BrandButton from '@/components/brand/brand-button'
 import PageShell from '@/components/brand/page-shell'
+import EventRsvpForm from '@/components/events/event-rsvp-form'
 import { EVENTS, getEventBySlug, getEventSlugs } from '@/constants/events'
 
 export const generateStaticParams = async () => {
@@ -126,11 +127,11 @@ const EventDetailPage = async ({ params }) => {
               <div className="brand-rule-gradient mt-14 max-w-sm" />
 
               <div className="mt-10 flex flex-wrap gap-4">
-                <BrandButton variant="primary" href="/volunteer">
-                  Volunteer with the Campaign →
+                <BrandButton variant="primary" href="#rsvp">
+                  RSVP Now →
                 </BrandButton>
-                <BrandButton variant="ghost-light" href="/contact">
-                  Contact Us
+                <BrandButton variant="ghost-light" href="/volunteer">
+                  Volunteer with the Campaign
                 </BrandButton>
               </div>
             </div>
@@ -150,15 +151,19 @@ const EventDetailPage = async ({ params }) => {
         />
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
-          <div className="grid grid-cols-12 gap-6 lg:gap-12">
-            <div className="col-span-12 lg:col-span-8">
-              <p className="brand-section-label text-patriot mb-6">/event · What it was about</p>
+          <div className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
+            <div className="col-span-12 lg:col-span-7">
+              <p className="brand-section-label text-patriot mb-6">/event · What it&rsquo;s about</p>
 
               <div className="space-y-6 text-[17px] leading-[1.8] text-ink/80 font-light max-w-[60ch]">
-                {event.description.map((para, idx) => (
-                  <p key={idx}>{para}</p>
+                {event.description.map((para) => (
+                  <p key={para.slice(0, 40)}>{para}</p>
                 ))}
               </div>
+            </div>
+
+            <div id="rsvp" className="col-span-12 lg:col-span-5">
+              <EventRsvpForm event={event} />
             </div>
           </div>
         </div>

@@ -1,8 +1,13 @@
-'use client'
-
 import BrandButton from '@/components/brand/brand-button'
 import PageHero from '@/components/brand/page-hero'
 import PageShell from '@/components/brand/page-shell'
+import VolunteerSignup from '@/components/volunteer/volunteer-signup'
+
+export const metadata = {
+  title: 'Volunteer — Royce White for U.S. Senate',
+  description:
+    'Sign up to volunteer with the Royce White for U.S. Senate campaign. All Hands On Deck — phones, doors, events, and more.',
+}
 
 const ROLES = [
   { number: '01', title: 'Signs' },
@@ -53,8 +58,7 @@ const VolunteerPage = () => {
         />
         <span
           aria-hidden="true"
-          className="brand-section-number hidden lg:block text-patriot/[0.05]"
-          style={{ top: '60px', right: '40px', fontSize: '200px' }}
+          className="brand-section-number hidden lg:block text-patriot/[0.05] top-[60px] right-10 text-[200px]"
         >
           031
         </span>
@@ -65,10 +69,7 @@ const VolunteerPage = () => {
               <p className="brand-section-label text-patriot">/031 — Volunteer Opportunities</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
-              <h2
-                className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900"
-                style={{ fontSize: 'clamp(2.25rem, 3.75vw, 3.5rem)' }}
-              >
+              <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900 text-[clamp(2.25rem,3.75vw,3.5rem)]">
                 Eight ways to put your{' '}
                 <em className="not-italic italic text-patriot">hands</em> on this campaign.
               </h2>
@@ -136,10 +137,7 @@ const VolunteerPage = () => {
             </div>
 
             <div className="col-span-12 lg:col-span-5">
-              <h3
-                className="font-display font-black leading-[1.05] tracking-[-0.02em] text-white"
-                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
-              >
+              <h3 className="font-display font-black leading-[1.05] tracking-[-0.02em] text-white text-[clamp(1.75rem,3vw,2.5rem)]">
                 The people are{' '}
                 <em className="not-italic italic text-liberty">coming.</em>
               </h3>
@@ -162,166 +160,13 @@ const VolunteerPage = () => {
             <p className="brand-section-label text-patriot justify-center inline-flex mb-6">
               /033 — Sign Up
             </p>
-            <h2
-              className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900"
-              style={{ fontSize: 'clamp(2rem, 3.25vw, 3rem)' }}
-            >
+            <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900 text-[clamp(2rem,3.25vw,3rem)]">
               Tell us what you&rsquo;re{' '}
               <em className="not-italic italic text-patriot">ready to do.</em>
             </h2>
           </div>
 
-          <form
-            className="relative bg-white border border-stone-200 rounded-[4px] p-8 lg:p-10"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <span
-              aria-hidden="true"
-              className="absolute top-0 left-0 w-[3px] h-16 bg-patriot"
-            />
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label
-                  htmlFor="v-first"
-                  className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-                >
-                  First Name
-                </label>
-                <input
-                  id="v-first"
-                  name="first-name"
-                  type="text"
-                  required
-                  className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="v-last"
-                  className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-                >
-                  Last Name
-                </label>
-                <input
-                  id="v-last"
-                  name="last-name"
-                  type="text"
-                  required
-                  className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              <div>
-                <label
-                  htmlFor="v-email"
-                  className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-                >
-                  Email
-                </label>
-                <input
-                  id="v-email"
-                  name="email"
-                  type="email"
-                  required
-                  className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="v-zip"
-                  className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-                >
-                  Zip Code
-                </label>
-                <input
-                  id="v-zip"
-                  name="zip"
-                  type="text"
-                  required
-                  className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
-                />
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <label
-                htmlFor="v-phone"
-                className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-              >
-                Mobile Phone <span className="font-normal normal-case tracking-normal text-stone-600">(optional)</span>
-              </label>
-              <input
-                id="v-phone"
-                name="phone"
-                type="tel"
-                className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
-              />
-            </div>
-
-            <fieldset className="mt-6">
-              <legend className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot mb-3">
-                Volunteer Opportunities (check all that apply)
-              </legend>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {ROLES.map((role) => (
-                  <label
-                    key={role.number}
-                    className="flex items-start gap-3 cursor-pointer p-3 rounded-[4px] hover:bg-parchment transition-colors duration-700 ease-out"
-                  >
-                    <input
-                      type="checkbox"
-                      name="role"
-                      value={role.title}
-                      className="mt-1 h-4 w-4 accent-patriot"
-                    />
-                    <span className="font-body text-[14px] leading-[1.5] text-ink">
-                      <span className="font-semibold text-navy-900">{role.title}</span>
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-
-            <div className="mt-6">
-              <label
-                htmlFor="v-note"
-                className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-              >
-                Write a comment
-              </label>
-              <textarea
-                id="v-note"
-                name="note"
-                rows={4}
-                className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink leading-[1.65]"
-              />
-            </div>
-
-            <label className="mt-6 flex items-start gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                name="sms-optin"
-                className="mt-1 h-4 w-4 accent-patriot"
-              />
-              <span className="text-[13px] leading-[1.6] text-ink/80 font-light">
-                SMS Opt In. By providing your telephone number, you consent to receive calls and
-                text messages. Msg &amp; data rates may apply. Msg frequency may vary. Reply
-                <strong> STOP</strong> to opt-out &amp; <strong>HELP</strong> for help.
-              </span>
-            </label>
-
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <BrandButton variant="primary" type="submit">
-                Count Me In →
-              </BrandButton>
-              <span className="font-mono text-[12px] tracking-[0.05em] uppercase text-stone-600">
-                The fight continues…
-              </span>
-            </div>
-          </form>
+          <VolunteerSignup />
         </div>
       </section>
     </PageShell>

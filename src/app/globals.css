@@ -124,12 +124,25 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  *:focus-visible {
+  /* Default focus ring for buttons, links, and other interactive elements.
+     Excludes form controls (handled separately below) so the heavy navy halo
+     doesn't stack with the input's own border. */
+  *:focus-visible:not(input):not(select):not(textarea) {
     outline: 2px solid #29ABE2;
     outline-offset: 2px;
     /* Navy halo flanks the liberty ring so the overall focus indicator keeps
        ≥3:1 non-text contrast on any brand background (WCAG 1.4.11, 2.4.13). */
     box-shadow: 0 0 0 6px rgba(10, 22, 40, 0.9);
+  }
+
+  /* Form controls: clean Liberty ring with a soft cyan glow. */
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #29ABE2;
+    outline-offset: 0;
+    border-color: #29ABE2;
+    box-shadow: 0 0 0 3px rgba(41, 171, 226, 0.25);
   }
 }
 

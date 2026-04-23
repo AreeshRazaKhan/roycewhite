@@ -40,7 +40,15 @@
       "Bash(cygpath -w /tmp)",
       "Bash(git stash *)",
       "Bash(git mv *)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "Bash(git commit *)",
+      "Bash(grep -qE \"Ready|ready in|error|Error|EADDRINUSE\" \"C:\\\\\\\\Users\\\\\\\\Dev\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\C--Users-Dev-Documents-GitHub-roycewhite\\\\\\\\a99ab8dc-ccba-4160-b24e-d59498bbb356\\\\\\\\tasks\\\\\\\\bq1ulimge.output\")",
+      "Bash(tail -n 20 \"C:\\\\\\\\Users\\\\\\\\Dev\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\C--Users-Dev-Documents-GitHub-roycewhite\\\\\\\\a99ab8dc-ccba-4160-b24e-d59498bbb356\\\\\\\\tasks\\\\\\\\bq1ulimge.output\")",
+      "WebSearch",
+      "Bash(tail *)",
+      "Bash(git *)",
+      "Bash(npx next *)",
+      "Bash(npx eslint *)"
     ],
     "deny": []
   }

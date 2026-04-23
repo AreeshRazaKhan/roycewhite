@@ -18,7 +18,14 @@ const BASE =
 
 const isExternal = (href) => /^https?:\/\//.test(href)
 
-const BrandButton = ({ children, variant, href, type, className, ...rest }) => {
+const BrandButton = ({
+  children,
+  variant = 'primary',
+  href = '',
+  type = 'button',
+  className = '',
+  ...rest
+}) => {
   const classes = cn(BASE, VARIANT_STYLES[variant], className)
 
   if (href) {
@@ -55,13 +62,6 @@ BrandButton.propTypes = {
   href: PropTypes.string,
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   className: PropTypes.string,
-}
-
-BrandButton.defaultProps = {
-  variant: 'primary',
-  href: '',
-  type: 'button',
-  className: '',
 }
 
 export default BrandButton

@@ -1,36 +1,30 @@
-'use client'
-
 import AccordionItem from '@/components/brand/brand-accordion'
 import BrandButton from '@/components/brand/brand-button'
 import PageHero from '@/components/brand/page-hero'
 import PageShell from '@/components/brand/page-shell'
+import IssueForm from '@/components/issues/issue-form'
 
-const TOPICS = [
-  'America First',
-  'Border & Immigration',
-  'Second Amendment',
-  'Economy',
-  'Foreign Policy',
-  'Education',
-  'Mental Health',
-  'Something Else',
-]
+export const metadata = {
+  title: 'Ask Royce — Royce White for U.S. Senate',
+  description:
+    'Ask Royce White anything. Submit a question or read his positions on the issues that matter most to Minnesota.',
+}
 
 const FIGHTING_ISSUES = [
   {
     number: '01',
     title: 'Public Safety',
     body: [
-      'Public safety and economy, public safety and education, and public safety and mental health are all “which comes first, the chicken or the egg” propositions. I believe in a set of legislative initiatives that approaches economic, education, and mental health issues in novel and holistic ways, which empowers individuals while shrinking the size and scope of an administrative state that has become overly burdensome and unnecessarily large. I reject the notion that crime is either acceptable or a necessary part of the community’s life. Our police are tasked with the most difficult of society’s assignments, and their pay is not equal to the skills necessary to protect both the victim and the victimizer. Our Constitution demands that the rights of the minority are protected – and who among us is more a minority than those who suffer from addiction, mental health, and the scourge of poverty disorders? As your Senator, I will fight for the necessary funding and training so that our police become the pride of our community.',
+      'Public safety and economy, public safety and education, and public safety and mental health are all "which comes first, the chicken or the egg" propositions. I believe in a set of legislative initiatives that approaches economic, education, and mental health issues in novel and holistic ways, which empowers individuals while shrinking the size and scope of an administrative state that has become overly burdensome and unnecessarily large. I reject the notion that crime is either acceptable or a necessary part of the community’s life. Our police are tasked with the most difficult of society’s assignments, and their pay is not equal to the skills necessary to protect both the victim and the victimizer. Our Constitution demands that the rights of the minority are protected – and who among us is more a minority than those who suffer from addiction, mental health, and the scourge of poverty disorders? As your Senator, I will fight for the necessary funding and training so that our police become the pride of our community.',
     ],
   },
   {
     number: '02',
     title: 'Economy (Globalism)',
     body: [
-      'As an NBA player, I experienced first-hand the operation of a globalized media, merchandising, and sports entertainment company that cared for its employees as a master managed a slave. Only in this case, riches and stardom replaced the whip to maintain discipline and compliance. I reject the “you’ll be happy and own nothing” mantra of the globalists as “slavery 2.0”. What is globalism? It is the international merger of the military, media, and medical global industries, big tech, and the global banks into a system of authoritarian control that enslaves the free people and destroys the independent family-owned businesses that traditionally have been the backbone of the USA economy.',
-      'Solutions to problems require resolute honesty and bravery. With all due respect to our Chinese brothers and sisters, as your Senator, I will, on my first day in office, introduce legislation that will encourage the on-shoring of all our imported supplies purchased from Chinese-owned companies producing in China or anywhere else in the world. I do not intend this as an act of war; rather, I intend this act as the “truth shall set you free.”',
-      'Only with good jobs available to all can we defeat the globalists and restore our national honor and pride in the dignity of work performed within our national borders. My legislation will include federal loan guarantees for the construction of production facilities for strategic goods. My policy will favor family-owned independent businesses. The three-card monte was that “I,” the consumer, benefited from low prices, but now, we have killed a large percentage of our manufacturing jobs, and 97% of antibiotics consumed here at home are imported from China. Enough!',
+      'As an NBA player, I experienced first-hand the operation of a globalized media, merchandising, and sports entertainment company that cared for its employees as a master managed a slave. Only in this case, riches and stardom replaced the whip to maintain discipline and compliance. I reject the "you’ll be happy and own nothing" mantra of the globalists as "slavery 2.0". What is globalism? It is the international merger of the military, media, and medical global industries, big tech, and the global banks into a system of authoritarian control that enslaves the free people and destroys the independent family-owned businesses that traditionally have been the backbone of the USA economy.',
+      'Solutions to problems require resolute honesty and bravery. With all due respect to our Chinese brothers and sisters, as your Senator, I will, on my first day in office, introduce legislation that will encourage the on-shoring of all our imported supplies purchased from Chinese-owned companies producing in China or anywhere else in the world. I do not intend this as an act of war; rather, I intend this act as the "truth shall set you free."',
+      'Only with good jobs available to all can we defeat the globalists and restore our national honor and pride in the dignity of work performed within our national borders. My legislation will include federal loan guarantees for the construction of production facilities for strategic goods. My policy will favor family-owned independent businesses. The three-card monte was that "I," the consumer, benefited from low prices, but now, we have killed a large percentage of our manufacturing jobs, and 97% of antibiotics consumed here at home are imported from China. Enough!',
     ],
   },
   {
@@ -129,8 +123,7 @@ const AskRoycePage = () => {
         />
         <span
           aria-hidden="true"
-          className="brand-section-number hidden lg:block text-patriot/[0.06]"
-          style={{ top: '60px', left: '40px', fontSize: '200px' }}
+          className="brand-section-number hidden lg:block text-patriot/[0.06] top-[60px] left-10 text-[200px]"
         >
           041
         </span>
@@ -141,10 +134,7 @@ const AskRoycePage = () => {
               <p className="brand-section-label text-gold">/041 — American Values</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
-              <h2
-                className="font-display font-black leading-[1.1] tracking-[-0.02em] text-white"
-                style={{ fontSize: 'clamp(2.25rem, 3.75vw, 3.5rem)' }}
-              >
+              <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-white text-[clamp(2.25rem,3.75vw,3.5rem)]">
                 The principles{' '}
                 <em className="not-italic italic text-liberty">that do not move.</em>
               </h2>
@@ -201,8 +191,7 @@ const AskRoycePage = () => {
         />
         <span
           aria-hidden="true"
-          className="brand-section-number hidden lg:block text-patriot/[0.05]"
-          style={{ top: '60px', right: '40px', fontSize: '200px' }}
+          className="brand-section-number hidden lg:block text-patriot/[0.05] top-[60px] right-10 text-[200px]"
         >
           042
         </span>
@@ -213,10 +202,7 @@ const AskRoycePage = () => {
               <p className="brand-section-label text-patriot">/042 — Issues We Are Fighting For</p>
             </div>
             <div className="col-span-12 lg:col-span-8">
-              <h2
-                className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900"
-                style={{ fontSize: 'clamp(2.25rem, 3.75vw, 3.5rem)' }}
-              >
+              <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900 text-[clamp(2.25rem,3.75vw,3.5rem)]">
                 We will fight{' '}
                 <em className="not-italic italic text-patriot">and we will win.</em>
               </h2>
@@ -231,10 +217,9 @@ const AskRoycePage = () => {
             {FIGHTING_ISSUES.map((issue) => (
               <AccordionItem key={issue.number} number={issue.number} title={issue.title}>
                 <div className="space-y-4">
-                  {issue.body.map((p, idx) => (
+                  {issue.body.map((p) => (
                     <p
-                      // eslint-disable-next-line react/no-array-index-key
-                      key={idx}
+                      key={p.slice(0, 40)}
                       className="text-[15px] lg:text-[16px] leading-[1.75] text-ink/85 font-light"
                     >
                       {p}
@@ -254,8 +239,7 @@ const AskRoycePage = () => {
         />
         <span
           aria-hidden="true"
-          className="brand-section-number hidden lg:block text-patriot/[0.05]"
-          style={{ top: '60px', right: '40px', fontSize: '200px' }}
+          className="brand-section-number hidden lg:block text-patriot/[0.05] top-[60px] right-10 text-[200px]"
         >
           043
         </span>
@@ -265,10 +249,7 @@ const AskRoycePage = () => {
             <div className="col-span-12 lg:col-span-5">
               <p className="brand-section-label text-patriot mb-8">/043 — Submit a Question</p>
 
-              <h2
-                className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900"
-                style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)' }}
-              >
+              <h2 className="font-display font-black leading-[1.1] tracking-[-0.02em] text-navy-900 text-[clamp(2rem,3.5vw,3rem)]">
                 Feel free to reach out for further{' '}
                 <em className="not-italic italic text-patriot">clarification.</em>
               </h2>
@@ -284,117 +265,7 @@ const AskRoycePage = () => {
             </div>
 
             <div className="col-span-12 lg:col-span-7">
-              <form
-                className="relative bg-white border border-stone-200 rounded-[4px] p-8 lg:p-10"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <span
-                  aria-hidden="true"
-                  className="absolute top-0 left-0 w-[3px] h-16 bg-patriot"
-                />
-
-                <p className="font-accent text-[12px] font-semibold tracking-[0.2em] uppercase text-patriot mb-2">
-                  Ask Royce
-                </p>
-                <p className="font-display font-extrabold text-[28px] leading-[1.1] text-navy-900 mb-8">
-                  Your question, in your own words.
-                </p>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="a-first"
-                      className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-                    >
-                      First Name
-                    </label>
-                    <input
-                      id="a-first"
-                      name="first-name"
-                      type="text"
-                      required
-                      className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="a-city"
-                      className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-                    >
-                      City
-                    </label>
-                    <input
-                      id="a-city"
-                      name="city"
-                      type="text"
-                      required
-                      className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
-                    />
-                  </div>
-                </div>
-
-                <div className="mt-4">
-                  <label
-                    htmlFor="a-email"
-                    className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="a-email"
-                    name="email"
-                    type="email"
-                    required
-                    className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
-                  />
-                </div>
-
-                <div className="mt-4">
-                  <label
-                    htmlFor="a-topic"
-                    className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-                  >
-                    Topic
-                  </label>
-                  <select
-                    id="a-topic"
-                    name="topic"
-                    defaultValue="America First"
-                    className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink"
-                  >
-                    {TOPICS.map((t) => (
-                      <option key={t} value={t}>
-                        {t}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="mt-4">
-                  <label
-                    htmlFor="a-question"
-                    className="font-accent text-[12px] font-semibold tracking-[0.14em] uppercase text-patriot"
-                  >
-                    Your Question
-                  </label>
-                  <textarea
-                    id="a-question"
-                    name="question"
-                    rows={5}
-                    required
-                    className="mt-2 w-full bg-parchment border border-stone-200 rounded-[4px] px-4 py-3 font-body text-[15px] text-ink leading-[1.65]"
-                  />
-                </div>
-
-                <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <BrandButton variant="primary" type="submit">
-                    Send Question →
-                  </BrandButton>
-                  <span className="font-mono text-[12px] tracking-[0.05em] uppercase text-stone-600">
-                    The fight continues…
-                  </span>
-                </div>
-              </form>
+              <IssueForm />
             </div>
           </div>
         </div>
