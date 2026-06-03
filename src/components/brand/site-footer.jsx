@@ -152,6 +152,10 @@ const SiteFooter = () => {
             </p>
           </div>
         </div>
+
+        <p className="mt-6 font-body text-[11px] leading-[1.6] italic text-stone-400 max-w-3xl">
+          Some images, audio, video, or written content may be created or enhanced using artificial intelligence (AI) tools.
+        </p>
       </div>
     </footer>
   )
