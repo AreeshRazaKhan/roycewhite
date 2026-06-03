@@ -48,7 +48,8 @@
       "Bash(tail *)",
       "Bash(git *)",
       "Bash(npx next *)",
-      "Bash(npx eslint *)"
+      "Bash(npx eslint *)",
+      "WebFetch(domain:claude.ai)"
     ],
     "deny": []
   }

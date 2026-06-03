@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Royce White — Modern Nationalist Brand Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@1,700;1,900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --flame:#E4322B;
+    --liberty:#5BB8E6;
+    --ink:#0A0A0A;
+    --ash:#1A1A1A;
+    --paper:#FAFAF7;
+    --bone:#EFEBE2;
+    --line:rgba(0,0,0,.12);
+    --lineL:rgba(255,255,255,.14);
+    --sans:"Inter",system-ui,sans-serif;
+    --display:"Inter",system-ui,sans-serif;
+    --editorial:"Playfair Display",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1280px;margin:0 auto;padding:48px 32px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--flame)}
+  h1,h2,h3,h4{font-family:var(--display);font-weight:900;letter-spacing:-.04em;line-height:.92}
+  h1{font-size:clamp(64px,12vw,200px)}
+  h2{font-size:clamp(40px,6vw,96px);margin-bottom:24px}
+  h3{font-size:32px;letter-spacing:-.02em}
+  h4{font-size:18px;letter-spacing:0;text-transform:uppercase}
+  p{max-width:62ch}
+  .mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+
+  /* ——— HERO ——— */
+  .hero{background:var(--ink);color:var(--paper);padding:64px 32px 96px;position:relative;overflow:hidden;border-bottom:1px solid var(--lineL)}
+  .hero .wrap{padding:0;max-width:1280px;margin:0 auto}
+  .hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:96px}
+  .torch{width:48px;height:48px;display:inline-block}
+  .hero h1{color:var(--paper)}
+  .hero h1 em{font-family:var(--editorial);font-style:italic;color:var(--flame);font-weight:900}
+  .hero-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:64px;padding-top:32px;border-top:1px solid var(--lineL)}
+  .hero-meta div small{display:block;font-family:var(--mono);font-size:11px;opacity:.6;margin-bottom:8px;letter-spacing:.12em;text-transform:uppercase}
+  .hero-meta div b{font-size:15px;font-weight:600}
+
+  /* ——— SECTIONS ——— */
+  section{border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:24px;margin-bottom:48px}
+  .sec-head .num{font-family:var(--mono);font-size:13px;color:var(--flame)}
+
+  /* ——— COLOR ——— */
+  .swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1px solid var(--line)}
+  .sw{padding:32px 24px;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line)}
+  .sw:last-child{border-right:0}
+  .sw b{font-size:22px;font-family:var(--display);font-weight:900;letter-spacing:-.02em}
+  .sw small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+  .sw.flame{background:var(--flame);color:#fff}
+  .sw.liberty{background:var(--liberty);color:var(--ink)}
+  .sw.ink{background:var(--ink);color:var(--paper)}
+  .sw.ash{background:var(--ash);color:var(--paper)}
+  .sw.bone{background:var(--bone);color:var(--ink)}
+  .sw.paper{background:var(--paper);color:var(--ink)}
+
+  /* ——— TYPE ——— */
+  .type-row{display:grid;grid-template-columns:160px 1fr;gap:32px;padding:32px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+  .type-row:last-child{border-bottom:0}
+  .type-row .label small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+  .type-row .label b{font-size:14px;font-weight:600}
+  .t-display{font-family:var(--display);font-size:128px;font-weight:900;letter-spacing:-.05em;line-height:.85}
+  .t-editorial{font-family:var(--editorial);font-style:italic;font-size:88px;font-weight:900;line-height:.95;color:var(--flame)}
+  .t-h2{font-family:var(--display);font-size:64px;font-weight:900;letter-spacing:-.04em;line-height:.95}
+  .t-h3{font-family:var(--display);font-size:32px;font-weight:900;letter-spacing:-.02em}
+  .t-body{font-family:var(--sans);font-size:17px;line-height:1.55;max-width:62ch}
+  .t-mono{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+
+  /* ——— BENTO PREVIEW ——— */
+  .bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:110px;gap:12px}
+  .tile{border:1px solid var(--line);padding:20px;background:var(--paper);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+  .tile .tag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--flame)}
+  .tile h3{font-family:var(--display);font-weight:900;letter-spacing:-.03em;line-height:.9}
+  .t-hero{grid-column:span 8;grid-row:span 3;background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .t-hero h3{font-size:84px}
+  .t-hero h3 em{font-family:var(--editorial);font-style:italic;color:var(--flame)}
+  .t-torch{grid-column:span 2;grid-row:span 1;background:var(--flame);color:#fff;border-color:var(--flame);align-items:center;justify-content:center}
+  .t-ticker{grid-column:span 2;grid-row:span 1;background:var(--bone)}
+  .t-contribute{grid-column:span 4;grid-row:span 2;background:var(--flame);color:#fff;border-color:var(--flame);border-radius:24px}
+  .t-contribute h3{font-size:56px}
+  .t-bio{grid-column:span 3;grid-row:span 3;background:var(--bone)}
+  .t-policy{grid-column:span 6;grid-row:span 3;background:var(--paper)}
+  .t-policy ol{list-style:none;counter-reset:p;margin-top:16px;columns:2;column-gap:24px}
+  .t-policy li{counter-increment:p;font-family:var(--display);font-weight:900;font-size:20px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .t-policy li::before{content:counter(p,decimal-leading-zero);font-family:var(--mono);font-size:11px;color:var(--flame);margin-right:12px}
+  .t-join{grid-column:span 4;grid-row:span 2;background:var(--liberty);color:var(--ink);border-color:var(--liberty)}
+  .t-join h3{font-size:42px}
+  .t-store{grid-column:span 2;grid-row:span 2;background:var(--ash);color:var(--paper);border-color:var(--ash)}
+  .t-media{grid-column:span 12;grid-row:span 2;background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .t-manifesto{grid-column:span 12;grid-row:span 3;background:var(--paper)}
+  .t-manifesto h3{font-size:clamp(48px,8vw,140px);font-family:var(--editorial);font-style:italic;font-weight:900}
+
+  /* ——— BUTTONS ——— */
+  .btn-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:12px;padding:18px 28px;font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);background:var(--ink);color:var(--paper);transition:transform .2s ease, background .2s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:var(--flame);border-color:var(--flame);border-radius:999px;padding:20px 36px;font-size:15px}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.liberty{background:var(--liberty);border-color:var(--liberty);color:var(--ink)}
+  .btn .arrow{display:inline-block;transition:transform .2s}
+  .btn:hover .arrow{transform:translateX(6px)}
+
+  /* ——— STACK / VOICE ——— */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{border:1px solid var(--line);padding:32px;background:var(--paper)}
+  .card h4{margin-bottom:16px;color:var(--flame)}
+  .card ul{list-style:none}
+  .card li{padding:8px 0;border-bottom:1px dashed var(--line);font-size:14px}
+  .card li:last-child{border-bottom:0}
+
+  footer{padding:48px 32px;background:var(--ink);color:var(--paper);text-align:center}
+  footer .mono{opacity:.6}
+
+  @media (max-width:860px){
+    .swatches{grid-template-columns:repeat(2,1fr)}
+    .sw{border-right:0;border-bottom:1px solid var(--line)}
+    .bento{grid-template-columns:repeat(4,1fr);grid-auto-rows:auto}
+    .tile,.t-hero,.t-torch,.t-ticker,.t-contribute,.t-bio,.t-policy,.t-join,.t-store,.t-media,.t-manifesto{grid-column:span 4;grid-row:auto}
+    .t-hero h3{font-size:48px}
+    .hero-meta{grid-template-columns:repeat(2,1fr)}
+    .type-row{grid-template-columns:1fr}
+    .t-display{font-size:72px}
+    .cards{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ——— HERO ——— -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <svg class="torch" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M50 8 C42 22 36 30 40 44 C42 36 46 32 50 28 C54 34 58 40 56 48 C62 40 64 30 58 20 C56 14 52 10 50 8 Z" fill="#E4322B"/>
+        <rect x="44" y="50" width="12" height="4" fill="#5BB8E6"/>
+        <rect x="42" y="56" width="16" height="4" fill="#5BB8E6"/>
+        <rect x="46" y="62" width="8" height="28" fill="#5BB8E6"/>
+      </svg>
+      <span class="mono" style="opacity:.6">Brand Guide · v1.0 · 2026</span>
+    </div>
+    <span class="eyebrow">Modern Nationalist — Identity System</span>
+    <h1 style="margin-top:24px">AMERICA<br/>NEEDS A<br/><em>fighter.</em></h1>
+    <div class="hero-meta">
+      <div><small>Client</small><b>Royce White</b></div>
+      <div><small>Discipline</small><b>Brand · Web · Motion</b></div>
+      <div><small>Inspiration</small><b>Veto — Axiom Themes</b></div>
+      <div><small>Status</small><b>Proposal — Phase 1</b></div>
+    </div>
+  </div>
+</header>
+
+<!-- ——— 01 PRINCIPLES ——— -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num">01 —</span><h2>Principles</h2></div>
+    <div class="cards">
+      <div class="card">
+        <h4>Unflinching</h4>
+        <p>No hedged language. Oversized type. High-contrast layouts. Silence where others would fill with noise.</p>
+      </div>
+      <div class="card">
+        <h4>Editorial</h4>
+        <p>Treat the campaign like a magazine cover. Pull-quotes, numbered policy, italic display serif for emotional punches.</p>
+      </div>
+      <div class="card">
+        <h4>Monumental</h4>
+        <p>Type at architectural scale — 128–200px headlines. Content that physically dominates the viewport.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— 02 COLOR ——— -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num">02 —</span><h2>Color</h2></div>
+    <p style="margin-bottom:32px">Sampled from the torch mark. The palette is intentionally narrow — two brand hues, one ink, one warm paper. Everything else is a tonal shift of those four.</p>
+    <div class="swatches">
+      <div class="sw flame"><small>Primary</small><div><b>Flame</b><br/><small>#E4322B</small></div></div>
+      <div class="sw liberty"><small>Secondary</small><div><b>Liberty</b><br/><small>#5BB8E6</small></div></div>
+      <div class="sw ink"><small>Ink</small><div><b>Ink</b><br/><small>#0A0A0A</small></div></div>
+      <div class="sw ash"><small>Surface</small><div><b>Ash</b><br/><small>#1A1A1A</small></div></div>
+      <div class="sw bone"><small>Warm</small><div><b>Bone</b><br/><small>#EFEBE2</small></div></div>
+      <div class="sw paper"><small>Light</small><div><b>Paper</b><br/><small>#FAFAF7</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— 03 TYPOGRAPHY ——— -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num">03 —</span><h2>Typography</h2></div>
+    <div class="type-row">
+      <div class="label"><small>Display — 128/85</small><b>Inter 900</b></div>
+      <div class="t-display">FIGHT BACK.</div>
+    </div>
+    <div class="type-row">
+      <div class="label"><small>Editorial — 88/95</small><b>Playfair Italic 900</b></div>
+      <div class="t-editorial">for the people.</div>
+    </div>
+    <div class="type-row">
+      <div class="label"><small>Headline — 64/95</small><b>Inter 900</b></div>
+      <div class="t-h2">Eight policies. No compromises.</div>
+    </div>
+    <div class="type-row">
+      <div class="label"><small>Sub — 32</small><b>Inter 900</b></div>
+      <div class="t-h3">A campaign built on the record, not the rehearsal.</div>
+    </div>
+    <div class="type-row">
+      <div class="label"><small>Body — 17/28</small><b>Inter 400</b></div>
+      <div class="t-body">Royce White isn't a politician — he's an operator. Former NBA first-round pick, mental health advocate, and the unfiltered voice of a movement that refuses to be managed by consultants. This is the type scale we use when the campaign needs to sound like a person, not a press release.</div>
+    </div>
+    <div class="type-row">
+      <div class="label"><small>Mono — 13</small><b>JetBrains Mono</b></div>
+      <div class="t-mono">POLICY · 03 — Economic Sovereignty → Mar 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— 04 BENTO LAYOUT ——— -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num">04 —</span><h2>Homepage Bento</h2></div>
+    <p style="margin-bottom:32px">Twelve-column asymmetric grid. Tiles deliberately mismatched in span and height. Contribute is the visual anchor — full flame fill, rounded, oversized. Join is the secondary anchor in liberty blue.</p>
+    <div class="bento">
+      <div class="tile t-hero">
+        <span class="tag" style="color:#fff">Hero · 8×3</span>
+        <h3>AMERICA<br/>NEEDS A<br/><em>fighter.</em></h3>
+      </div>
+      <div class="tile t-torch"><span class="tag" style="color:#fff">Mark</span><span style="font-size:32px">🔥</span></div>
+      <div class="tile t-ticker"><span class="tag">Live</span><div class="t-mono">Rally · Phoenix · 4.18</div></div>
+      <div class="tile t-contribute">
+        <span class="tag" style="color:#fff">CTA · Primary</span>
+        <h3>Give $20.<br/>Fuel the fight →</h3>
+      </div>
+      <div class="tile t-bio"><span class="tag">Bio</span><h3 style="font-size:32px">Who is<br/>Royce?</h3></div>
+      <div class="tile t-policy">
+        <span class="tag">Policy Index</span>
+        <ol>
+          <li>Economic Sovereignty</li>
+          <li>Mental Health</li>
+          <li>Veterans First</li>
+          <li>Election Integrity</li>
+          <li>Border Reality</li>
+          <li>Anti-Monopoly</li>
+        </ol>
+      </div>
+      <div class="tile t-join">
+        <span class="tag">CTA · Secondary</span>
+        <h3>Join the<br/>movement →</h3>
+      </div>
+      <div class="tile t-store"><span class="tag" style="color:#fff">Store</span><h3 style="font-size:22px;color:#fff">Merch<br/>drop</h3></div>
+      <div class="tile t-media"><span class="tag" style="color:#fff">Media Wall · Scroll</span><h3 style="font-size:32px">▶ Watch the latest</h3></div>
+      <div class="tile t-manifesto"><span class="tag">Manifesto</span><h3>We are not<br/>for sale.</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— 05 BUTTONS ——— -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num">05 —</span><h2>Buttons &amp; Motion</h2></div>
+    <div class="btn-row">
+      <a class="btn primary" href="#">Contribute <span class="arrow">→</span></a>
+      <a class="btn liberty" href="#">Join the Movement <span class="arrow">→</span></a>
+      <a class="btn" href="#">Read the Policy <span class="arrow">→</span></a>
+      <a class="btn ghost" href="#">Watch Rally <span class="arrow">→</span></a>
+    </div>
+    <div style="margin-top:48px" class="cards">
+      <div class="card"><h4>Cursor</h4><p>Custom blob cursor. Magnets to primary CTAs. Mix-blend-difference over dark hero tiles.</p></div>
+      <div class="card"><h4>Transitions</h4><p>Framer Motion tile entrance, staggered 60ms. GSAP ScrollTrigger pins hero overlap.</p></div>
+      <div class="card"><h4>Hover</h4><p>Tiles lift 2px. Arrow slides 6px. Images reveal on policy hover. No drop shadows — use 1px hairlines.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— 06 STACK ——— -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num">06 —</span><h2>Stack</h2></div>
+    <div class="cards">
+      <div class="card">
+        <h4>Framework</h4>
+        <ul>
+          <li>Next.js 15 (App Router)</li>
+          <li>React 19 · TypeScript</li>
+          <li>Vercel · ISR for media</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Styling &amp; Motion</h4>
+        <ul>
+          <li>Tailwind CSS v4 · design tokens</li>
+          <li>CSS Grid for bento spans</li>
+          <li>Framer Motion + GSAP ScrollTrigger</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Content &amp; Assets</h4>
+        <ul>
+          <li>Sanity or Payload CMS</li>
+          <li>next/font variable fonts</li>
+          <li>next/image · AVIF pipeline</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="mono">ROYCE WHITE · MODERN NATIONALIST · BRAND GUIDE v1.0 · 2026</span>
+</footer>
+
+</body>
+</html>
