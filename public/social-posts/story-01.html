@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>story-01 — Smash Mouth Populism</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--patriot:#D42027;--patriot-dark:#A8181E;--patriot-glow:rgba(212,32,39,.12);--liberty:#29ABE2;--liberty-light:#5EC4ED;--liberty-pale:rgba(41,171,226,.10);--navy-900:#0A1628;--navy-800:#0F1D34;--navy-700:#162840;--navy-600:#1E3550;--parchment:#F5F0EB;--stone-100:#EDE8E0;--stone-200:#DBD5CB;--stone-400:#9C968A;--stone-600:#6B7280;--ink:#141722;--moonlight:#EDEBE3;--gold:#C8A44E;--gold-light:#E0C978;--white:#FFFFFF;--hairline:rgba(212,32,39,.18);--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',-apple-system,sans-serif;--font-accent:'Space Grotesk',sans-serif;--font-mono:'JetBrains Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;overflow:hidden;background:#101419;font-family:var(--font-body)}
+.post{position:absolute;left:50%;top:50%;width:608px;height:1080px;transform:translate(-50%,-50%) scale(var(--s,1));background:var(--navy-900);overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.55)}
+.canvas{position:absolute;top:0;left:0;width:1080px;height:1920px;transform:scale(.5625);transform-origin:0 0;overflow:hidden}
+.grid-overlay{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(237,235,227,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(237,235,227,.03) 1px,transparent 1px);background-size:60px 60px}
+.band{position:absolute;left:0;right:0;height:86px;background:var(--patriot);display:flex;align-items:center;overflow:hidden;white-space:nowrap}
+.band span{font:700 26px var(--font-accent);letter-spacing:.22em;text-transform:uppercase;color:var(--white);padding-left:36px}
+.band-top{top:0}
+.band-bottom{bottom:0}
+.watermark{position:absolute;top:560px;left:-50px;font:900 430px/0.85 var(--font-display);letter-spacing:-.04em;color:rgba(212,32,39,.05);pointer-events:none;white-space:nowrap}
+.logo-slot{position:absolute;top:150px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:18px}
+.torch{width:46px;height:80px}
+.logo-name{font:700 24px var(--font-accent);letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
+.logo-tag{display:block;margin-top:6px;font:500 12px var(--font-accent);letter-spacing:.2em;text-transform:uppercase;color:var(--stone-400)}
+.content{position:absolute;left:90px;right:90px;top:320px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font:600 22px var(--font-accent);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:46px}
+.eyebrow::before,.eyebrow::after{content:"";width:42px;height:1px;background:currentColor}
+.headline{font:900 160px/1.02 var(--font-display);letter-spacing:-.02em;color:var(--moonlight);margin-bottom:46px}
+.headline em{font-style:italic;color:var(--liberty)}
+.rule{width:140px;height:3px;background:linear-gradient(90deg,var(--patriot),var(--liberty));margin:0 auto 46px}
+.subhead{font:300 31px/1.6 var(--font-body);color:rgba(237,235,227,.75);max-width:780px;margin:0 auto}
+.values{position:absolute;left:90px;right:90px;top:1210px;display:flex}
+.values .cell{flex:1;padding:34px 20px;border-left:1px solid var(--hairline);text-align:center}
+.values .cell:last-child{border-right:1px solid var(--hairline)}
+.values .num{font:500 22px var(--font-mono);color:var(--patriot);display:block;margin-bottom:16px}
+.values .lbl{font:600 26px var(--font-accent);letter-spacing:.14em;text-transform:uppercase;color:var(--moonlight)}
+.cta{position:absolute;left:50%;transform:translateX(-50%);top:1480px;display:inline-block;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);padding:30px 70px;font:600 20px/1 var(--font-accent);letter-spacing:.12em;text-transform:uppercase;background:var(--patriot);color:var(--white);border:1.5px solid var(--patriot);text-decoration:none;white-space:nowrap}
+.caption{position:absolute;left:0;right:0;top:1635px;text-align:center;font:400 14px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--stone-400)}
+</style>
+</head>
+<body>
+<div class="post">
+<div class="canvas">
+  <div class="grid-overlay"></div>
+  <div class="band band-top"><span>★ The People Are Coming ★ God · Family · Country ★ The People Are Coming ★ God · Family · Country</span></div>
+  <div class="watermark">ROYCE</div>
+  <div class="logo-slot">
+    <svg class="torch" viewBox="0 0 200 350" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 20 C90 60,70 80,75 120 C78 140,90 150,100 155 C110 150,122 140,125 120 C130 80,110 60,100 20Z" fill="#D42027"/><path d="M100 50 C95 75,82 90,85 120 C87 135,95 145,100 148 C105 145,113 135,115 120 C118 90,105 75,100 50Z" fill="#D42027" opacity=".6"/><rect x="85" y="160" width="30" height="12" rx="3" fill="#29ABE2"/><rect x="88" y="175" width="24" height="8" rx="2" fill="#29ABE2"/><polygon points="92,185 108,185 104,260 96,260" fill="#29ABE2"/></svg>
+    <div><span class="logo-name">Royce White</span><span class="logo-tag">For U.S. Senate</span></div>
+  </div>
+  <div class="content">
+    <div class="eyebrow">/001 — Fighting for Freedom</div>
+    <h1 class="headline">Smash<br>Mouth<br><em>Populism.</em></h1>
+    <div class="rule"></div>
+    <p class="subhead">There's a crisis of leadership, worldwide. The Global Affects the Local.</p>
+  </div>
+  <div class="values">
+    <div class="cell"><span class="num">/01</span><span class="lbl">God</span></div>
+    <div class="cell"><span class="num">/02</span><span class="lbl">Family</span></div>
+    <div class="cell"><span class="num">/03</span><span class="lbl">Country</span></div>
+  </div>
+  <a class="cta" href="#">Volunteer →</a>
+  <div class="caption">roycewhite.us · u.s. senate · minnesota · 2026</div>
+  <div class="band band-bottom"><span>★ The People Are Coming ★ God · Family · Country ★ The People Are Coming ★ God · Family · Country</span></div>
+</div>
+</div>
+<script>(function(){var p=document.querySelector('.post');function f(){p.style.setProperty('--s',Math.min(innerWidth/608,innerHeight/1080,1))}addEventListener('resize',f);f()})();</script>
+</body>
+</html>

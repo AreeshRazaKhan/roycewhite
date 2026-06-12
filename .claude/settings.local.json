@@ -49,8 +49,20 @@
       "Bash(git *)",
       "Bash(npx next *)",
       "Bash(npx eslint *)",
-      "WebFetch(domain:claude.ai)"
+      "WebFetch(domain:claude.ai)",
+      "PowerShell(node social-posts\\\\qa.js)",
+      "PowerShell(node social-posts\\\\_retrofit.js)",
+      "Bash(mkdir -p public/social-posts)",
+      "Bash(cp social-posts/*.html public/social-posts/)",
+      "Bash(break)",
+      "PowerShell(Start-Process \"http://localhost:3000/social-posts\")",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(git add *)"
     ],
     "deny": []
-  }
+  },
+  "enabledMcpjsonServers": [
+    "playwright"
+  ]
 }

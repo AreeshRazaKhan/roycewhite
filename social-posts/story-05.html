@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>story-05 — Volunteers' Weekly Meeting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--patriot:#D42027;--patriot-dark:#A8181E;--patriot-glow:rgba(212,32,39,.12);--liberty:#29ABE2;--liberty-light:#5EC4ED;--liberty-pale:rgba(41,171,226,.10);--navy-900:#0A1628;--navy-800:#0F1D34;--navy-700:#162840;--navy-600:#1E3550;--parchment:#F5F0EB;--stone-100:#EDE8E0;--stone-200:#DBD5CB;--stone-400:#9C968A;--stone-600:#6B7280;--ink:#141722;--moonlight:#EDEBE3;--gold:#C8A44E;--gold-light:#E0C978;--white:#FFFFFF;--hairline:rgba(212,32,39,.18);--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',-apple-system,sans-serif;--font-accent:'Space Grotesk',sans-serif;--font-mono:'JetBrains Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;overflow:hidden;background:#101419;font-family:var(--font-body)}
+.post{position:absolute;left:50%;top:50%;width:608px;height:1080px;transform:translate(-50%,-50%) scale(var(--s,1));background:var(--parchment);overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.55)}
+.canvas{position:absolute;top:0;left:0;width:1080px;height:1920px;transform:scale(.5625);transform-origin:0 0;overflow:hidden}
+.watermark{position:absolute;top:-80px;right:-50px;font:900 480px/1 var(--font-display);letter-spacing:-.04em;color:rgba(10,22,40,.05);pointer-events:none}
+.geo{position:absolute;pointer-events:none}
+.geo-circle{width:110px;height:110px;border-radius:50%;border:1.5px solid var(--navy-900);opacity:.06;top:160px;left:110px}
+.geo-diamond{width:26px;height:26px;border:1.5px solid var(--patriot);transform:rotate(45deg);opacity:.10;bottom:150px;left:150px}
+.geo-plus{font:700 30px var(--font-accent);color:var(--liberty);opacity:.10;bottom:230px;right:160px}
+.logo-slot{position:absolute;top:240px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:18px}
+.torch{width:42px;height:74px}
+.logo-name{font:700 23px var(--font-accent);letter-spacing:.18em;text-transform:uppercase;color:var(--navy-900)}
+.logo-tag{display:block;margin-top:6px;font:500 12px var(--font-accent);letter-spacing:.2em;text-transform:uppercase;color:var(--stone-400)}
+.eyebrow{position:absolute;top:410px;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:14px;font:600 21px var(--font-accent);letter-spacing:.2em;text-transform:uppercase;color:var(--patriot)}
+.eyebrow::before,.eyebrow::after{content:"";width:42px;height:1px;background:currentColor}
+.card{position:absolute;left:100px;right:100px;top:500px;background:var(--white);border:1px solid var(--stone-200);border-radius:4px;padding:90px 80px;text-align:center}
+.card::before{content:"";position:absolute;top:0;left:0;width:120px;height:5px;background:var(--patriot)}
+.date-num{font:900 280px/1 var(--font-display);letter-spacing:-.04em;color:var(--navy-900)}
+.date-mon{font:600 30px var(--font-accent);letter-spacing:.2em;text-transform:uppercase;color:var(--patriot);margin:20px 0 54px}
+.headline{font:800 68px/1.15 var(--font-display);letter-spacing:-.01em;color:var(--navy-900);margin-bottom:46px}
+.headline em{font-style:italic;color:var(--patriot)}
+.meta-row{display:flex;justify-content:center;gap:16px;align-items:baseline;margin-bottom:20px}
+.meta-row .k{font:500 15px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--patriot)}
+.meta-row .v{font:500 27px var(--font-body);color:var(--ink)}
+.body{font:400 22px/1.6 var(--font-body);color:var(--stone-600);max-width:600px;margin:14px auto 0}
+.cta{display:inline-block;margin-top:48px;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);padding:29px 66px;font:600 19px/1 var(--font-accent);letter-spacing:.12em;text-transform:uppercase;background:var(--navy-900);color:var(--white);border:1.5px solid var(--navy-900);text-decoration:none;white-space:nowrap}
+.footer-meta{position:absolute;left:100px;right:100px;top:1750px;display:flex;justify-content:space-between;font:400 13px var(--font-accent);letter-spacing:.16em;text-transform:uppercase;color:var(--stone-400);padding-top:22px;border-top:1px solid var(--stone-200)}
+</style>
+</head>
+<body>
+<div class="post">
+<div class="canvas">
+  <div class="watermark">31</div>
+  <div class="geo geo-circle"></div>
+  <div class="geo geo-diamond"></div>
+  <div class="geo geo-plus">+</div>
+  <div class="logo-slot">
+    <svg class="torch" viewBox="0 0 200 350" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 20 C90 60,70 80,75 120 C78 140,90 150,100 155 C110 150,122 140,125 120 C130 80,110 60,100 20Z" fill="#D42027"/><path d="M100 50 C95 75,82 90,85 120 C87 135,95 145,100 148 C105 145,113 135,115 120 C118 90,105 75,100 50Z" fill="#D42027" opacity=".6"/><rect x="85" y="160" width="30" height="12" rx="3" fill="#29ABE2"/><rect x="88" y="175" width="24" height="8" rx="2" fill="#29ABE2"/><polygon points="92,185 108,185 104,260 96,260" fill="#29ABE2"/></svg>
+    <div><span class="logo-name">Royce White</span><span class="logo-tag">For U.S. Senate</span></div>
+  </div>
+  <div class="eyebrow">Volunteer Events</div>
+  <div class="card">
+    <div class="date-num">31</div>
+    <div class="date-mon">Dec · Wednesday</div>
+    <h1 class="headline">Volunteers' <em>Weekly Meeting</em></h1>
+    <div class="meta-row"><span class="k">Time</span><span class="v">7:00 – 8:00 PM CT</span></div>
+    <div class="meta-row"><span class="k">Host</span><span class="v">Royce White For Senate</span></div>
+    <p class="body">Learn to engage and rally your community behind the movement.</p>
+    <a class="cta" href="#">RSVP →</a>
+  </div>
+  <div class="footer-meta"><span>All Hands On Deck</span><span>roycewhite.us/events</span></div>
+</div>
+</div>
+<script>(function(){var p=document.querySelector('.post');function f(){p.style.setProperty('--s',Math.min(innerWidth/608,innerHeight/1080,1))}addEventListener('resize',f);f()})();</script>
+</body>
+</html>

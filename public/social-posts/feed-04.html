@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>feed-04 — Announcement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--patriot:#D42027;--patriot-dark:#A8181E;--patriot-glow:rgba(212,32,39,.12);--liberty:#29ABE2;--liberty-light:#5EC4ED;--liberty-pale:rgba(41,171,226,.10);--navy-900:#0A1628;--navy-800:#0F1D34;--navy-700:#162840;--navy-600:#1E3550;--parchment:#F5F0EB;--stone-100:#EDE8E0;--stone-200:#DBD5CB;--stone-400:#9C968A;--stone-600:#6B7280;--ink:#141722;--moonlight:#EDEBE3;--gold:#C8A44E;--gold-light:#E0C978;--white:#FFFFFF;--hairline:rgba(212,32,39,.18);--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',-apple-system,sans-serif;--font-accent:'Space Grotesk',sans-serif;--font-mono:'JetBrains Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;overflow:hidden;background:#101419;font-family:var(--font-body)}
+.post{position:absolute;left:50%;top:50%;width:1080px;height:1080px;transform:translate(-50%,-50%) scale(var(--s,1));background:var(--navy-900);overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.55)}
+.canvas{position:absolute;inset:0;overflow:hidden}
+.band{position:absolute;left:-120px;right:-120px;height:74px;background:var(--patriot);display:flex;align-items:center;overflow:hidden;white-space:nowrap}
+.band-top{top:64px;transform:rotate(-3deg)}
+.band-bottom{bottom:88px;transform:rotate(-3deg)}
+.band span{font:700 24px var(--font-accent);letter-spacing:.22em;text-transform:uppercase;color:var(--white);padding-left:34px}
+.band-bottom{background:transparent;border-top:1.5px solid var(--hairline);border-bottom:1.5px solid var(--hairline)}
+.band-bottom span{color:rgba(237,235,227,.35)}
+.logo-slot{position:absolute;top:210px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:16px}
+.torch{width:38px;height:66px}
+.logo-name{font:700 21px var(--font-accent);letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
+.logo-tag{display:block;margin-top:5px;font:500 11px var(--font-accent);letter-spacing:.2em;text-transform:uppercase;color:var(--stone-400)}
+.content{position:absolute;left:90px;right:90px;top:360px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font:600 20px var(--font-accent);letter-spacing:.2em;text-transform:uppercase;color:var(--liberty);margin-bottom:30px}
+.eyebrow::before,.eyebrow::after{content:"";width:42px;height:1px;background:currentColor}
+.headline{font:900 132px/1.02 var(--font-display);letter-spacing:-.02em;color:var(--moonlight);margin-bottom:34px}
+.headline em{font-style:italic;color:var(--liberty)}
+.subhead{font:400 22px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:44px}
+.cta{display:inline-block;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);padding:24px 52px;font:600 17px/1 var(--font-accent);letter-spacing:.12em;text-transform:uppercase;background:var(--liberty);color:var(--navy-900);border:1.5px solid var(--liberty);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="post">
+<div class="canvas">
+  <div class="band band-top"><span>★ All Hands On Deck ★ The People Are Coming ★ All Hands On Deck ★ The People Are Coming ★ All Hands</span></div>
+  <div class="logo-slot">
+    <svg class="torch" viewBox="0 0 200 350" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 20 C90 60,70 80,75 120 C78 140,90 150,100 155 C110 150,122 140,125 120 C130 80,110 60,100 20Z" fill="#D42027"/><path d="M100 50 C95 75,82 90,85 120 C87 135,95 145,100 148 C105 145,113 135,115 120 C118 90,105 75,100 50Z" fill="#D42027" opacity=".6"/><rect x="85" y="160" width="30" height="12" rx="3" fill="#29ABE2"/><rect x="88" y="175" width="24" height="8" rx="2" fill="#29ABE2"/><polygon points="92,185 108,185 104,260 96,260" fill="#29ABE2"/></svg>
+    <div><span class="logo-name">Royce White</span><span class="logo-tag">For U.S. Senate</span></div>
+  </div>
+  <div class="content">
+    <div class="eyebrow">Caucus Counterattack</div>
+    <h1 class="headline">Become a<br><em>Delegate!</em></h1>
+    <div class="subhead">MNGOP Endorsement — 2026</div>
+    <a class="cta" href="#">Sign Up Today →</a>
+  </div>
+  <div class="band band-bottom"><span>★ All Hands On Deck ★ The People Are Coming ★ All Hands On Deck ★ The People Are Coming ★ All Hands</span></div>
+</div>
+</div>
+<script>(function(){var p=document.querySelector('.post');function f(){p.style.setProperty('--s',Math.min(innerWidth/1080,innerHeight/1080,1))}addEventListener('resize',f);f()})();</script>
+</body>
+</html>

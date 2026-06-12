@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>story-03 — National Debt Stat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--patriot:#D42027;--patriot-dark:#A8181E;--patriot-glow:rgba(212,32,39,.12);--liberty:#29ABE2;--liberty-light:#5EC4ED;--liberty-pale:rgba(41,171,226,.10);--navy-900:#0A1628;--navy-800:#0F1D34;--navy-700:#162840;--navy-600:#1E3550;--parchment:#F5F0EB;--stone-100:#EDE8E0;--stone-200:#DBD5CB;--stone-400:#9C968A;--stone-600:#6B7280;--ink:#141722;--moonlight:#EDEBE3;--gold:#C8A44E;--gold-light:#E0C978;--white:#FFFFFF;--hairline:rgba(212,32,39,.18);--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',-apple-system,sans-serif;--font-accent:'Space Grotesk',sans-serif;--font-mono:'JetBrains Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;overflow:hidden;background:#101419;font-family:var(--font-body)}
+.post{position:absolute;left:50%;top:50%;width:608px;height:1080px;transform:translate(-50%,-50%) scale(var(--s,1));background:var(--navy-900);overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.55)}
+.canvas{position:absolute;top:0;left:0;width:1080px;height:1920px;transform:scale(.5625);transform-origin:0 0;overflow:hidden}
+.grid-overlay{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(237,235,227,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(237,235,227,.03) 1px,transparent 1px);background-size:60px 60px}
+.section-number{position:absolute;top:90px;right:70px;font:900 190px/1 var(--font-display);letter-spacing:-.04em;color:rgba(212,32,39,.07);pointer-events:none}
+.watermark{position:absolute;bottom:-70px;right:-30px;font:900 360px/0.85 var(--font-display);letter-spacing:-.04em;color:rgba(212,32,39,.05);pointer-events:none;white-space:nowrap}
+.score{position:absolute;left:0;top:300px;width:100%;height:70px;pointer-events:none}
+.score .sl{position:absolute;height:1px;left:0}
+.sl-1{top:0;width:45%;background:linear-gradient(90deg,var(--patriot),transparent);opacity:.18}
+.sl-2{top:8px;width:28%;background:linear-gradient(90deg,var(--liberty),transparent);opacity:.22}
+.sl-3{top:16px;width:62%;background:linear-gradient(90deg,var(--patriot),transparent);opacity:.12}
+.sl-4{top:24px;width:18%;background:linear-gradient(90deg,var(--liberty),transparent);opacity:.26}
+.sl-5{top:32px;width:38%;background:linear-gradient(90deg,var(--patriot),transparent);opacity:.15}
+.logo-slot{position:absolute;top:150px;left:90px;display:flex;align-items:center;gap:16px}
+.torch{width:42px;height:74px}
+.logo-name{font:700 23px var(--font-accent);letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
+.logo-tag{display:block;margin-top:6px;font:500 12px var(--font-accent);letter-spacing:.2em;text-transform:uppercase;color:var(--stone-400)}
+.content{position:absolute;left:90px;right:90px;top:430px}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font:600 22px var(--font-accent);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.eyebrow::before{content:"";width:42px;height:1px;background:currentColor}
+.headline{font:900 380px/1 var(--font-display);letter-spacing:-.04em;color:var(--moonlight)}
+.headline span{color:var(--patriot)}
+.rule{width:140px;height:3px;background:linear-gradient(90deg,var(--patriot),var(--liberty));margin:40px 0 42px}
+.subhead{font:300 34px/1.55 var(--font-body);color:rgba(237,235,227,.78);max-width:840px}
+.subhead strong{color:var(--liberty);font-weight:600}
+.stats{position:absolute;left:90px;right:90px;top:1150px;display:flex;gap:24px}
+.stat{flex:1;background:var(--navy-800);border:1px solid rgba(41,171,226,.18);border-radius:4px;padding:36px 30px}
+.stat .n{font:900 64px/1 var(--font-display);letter-spacing:-.02em;color:var(--moonlight);display:block;margin-bottom:14px}
+.stat .n em{font-style:normal;color:var(--patriot)}
+.stat .l{font:500 14px/1.5 var(--font-accent);letter-spacing:.12em;text-transform:uppercase;color:var(--stone-400)}
+.cta{position:absolute;left:90px;top:1500px;display:inline-block;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);padding:28px 58px;font:600 19px/1 var(--font-accent);letter-spacing:.12em;text-transform:uppercase;background:transparent;color:var(--moonlight);border:1.5px solid var(--moonlight);text-decoration:none;white-space:nowrap}
+.meta{position:absolute;right:90px;top:1532px;font:400 14px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--stone-400)}
+.caption{position:absolute;left:0;right:0;top:1730px;text-align:center;font:400 13px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--stone-400)}
+</style>
+</head>
+<body>
+<div class="post">
+<div class="canvas">
+  <div class="grid-overlay"></div>
+  <div class="section-number">/002</div>
+  <div class="watermark">DEBT</div>
+  <div class="score"><span class="sl sl-1"></span><span class="sl sl-2"></span><span class="sl sl-3"></span><span class="sl sl-4"></span><span class="sl sl-5"></span></div>
+  <div class="logo-slot">
+    <svg class="torch" viewBox="0 0 200 350" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 20 C90 60,70 80,75 120 C78 140,90 150,100 155 C110 150,122 140,125 120 C130 80,110 60,100 20Z" fill="#D42027"/><path d="M100 50 C95 75,82 90,85 120 C87 135,95 145,100 148 C105 145,113 135,115 120 C118 90,105 75,100 50Z" fill="#D42027" opacity=".6"/><rect x="85" y="160" width="30" height="12" rx="3" fill="#29ABE2"/><rect x="88" y="175" width="24" height="8" rx="2" fill="#29ABE2"/><polygon points="92,185 108,185 104,260 96,260" fill="#29ABE2"/></svg>
+    <div><span class="logo-name">Royce White</span><span class="logo-tag">For U.S. Senate</span></div>
+  </div>
+  <div class="content">
+    <div class="eyebrow">/002 — The National Debt</div>
+    <div class="headline">$36<span>T</span></div>
+    <div class="rule"></div>
+    <p class="subhead">You can't have a country <strong>$36 trillion in debt</strong>. This can be addressed on day one.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><span class="n">97<em>%</em></span><span class="l">Antibiotics imported from China</span></div>
+    <div class="stat"><span class="n">12</span><span class="l">Year max term limit in Congress</span></div>
+    <div class="stat"><span class="n">3</span><span class="l">Priorities — border, debt, wars</span></div>
+  </div>
+  <a class="cta" href="#">Royce on the Issues</a>
+  <div class="meta">border · debt · forever wars</div>
+  <div class="caption">paid for by royce white for senate</div>
+</div>
+</div>
+<script>(function(){var p=document.querySelector('.post');function f(){p.style.setProperty('--s',Math.min(innerWidth/608,innerHeight/1080,1))}addEventListener('resize',f);f()})();</script>
+</body>
+</html>
